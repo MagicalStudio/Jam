@@ -6,7 +6,7 @@
   "sampleRate": 44100,
   "bitDepth": 1,
   "bitRate": 128,
-  "volume": 0.5,
+  "volume": 0.25,
   "preload": false,
   "audioGroupId": {
     "name": "audiogroup_default",

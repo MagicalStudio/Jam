@@ -10,7 +10,10 @@
   "persistent": false,
   "physicsObject": false,
   "managed": true,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_player_golpe",
+    "path": "objects/obj_player_golpe/obj_player_golpe.yy",
+  },
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,

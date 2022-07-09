@@ -5,7 +5,6 @@ down = keyboard_check(vk_down);
 right = keyboard_check(vk_right);
 up = keyboard_check(vk_up);
 soco = keyboard_check(ord("C"));
-
 //state machine
 switch(estado)
 {
@@ -43,17 +42,17 @@ switch(estado)
 				show_debug_message(combo_fase)
 				if (combo_fase == 2) // gancho
 				{
-					instance_create_depth(x,y,depth,obj_player_soco,{image_xscale : xscale})
+					instance_create_depth(x,y,depth,obj_player_gancho,{image_xscale : xscale, dano : 2})
 					combo_fase = 0; // volto pro soco
-					alarm[0] = tempo_ataque
+					alarm[0] = tempo_ataque*2
 				}else if (combo_fase == 1) // chute
 				{
-					instance_create_depth(x,y,depth,obj_player_soco,{image_xscale : xscale})
+					instance_create_depth(x,y,depth,obj_player_chute,{image_xscale : xscale, dano : 1})
 					combo_fase=2; // vou pro gancho
 					alarm[0] = tempo_ataque;
 				}else if (combo_fase == 0) //soco
 				{
-					instance_create_depth(x,y,depth,obj_player_soco,{image_xscale : xscale})
+					instance_create_depth(x,y,depth,obj_player_soco,{image_xscale : xscale, dano : 1})
 					combo_fase=1; // vou pro chute
 					alarm[0] = tempo_ataque
 				}
