@@ -1,6 +1,9 @@
 {
-  "name": "obj_inimigo_pai",
-  "spriteId": null,
+  "name": "obj_player_soco",
+  "spriteId": {
+    "name": "spr_player_soco",
+    "path": "sprites/spr_player_soco/spr_player_soco.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
   "solid": false,
@@ -20,15 +23,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "inimigos",
-    "path": "folders/Objects/inimigos.yy",
+    "name": "player",
+    "path": "folders/Objects/player.yy",
   },
   "resourceVersion": "1.0",
   "tags": [],
