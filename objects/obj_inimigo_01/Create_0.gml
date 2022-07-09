@@ -6,4 +6,5 @@ velh = 0;
 velv = 0;
 
 //saude
-vida = 4;
+hp_max = 7;
+hp = hp_max;

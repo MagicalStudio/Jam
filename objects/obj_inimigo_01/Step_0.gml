@@ -9,7 +9,7 @@ switch(estado)
 	case "parado":
 		if (instance_inside_view_camera(view_camera[0]))
 		{
-			if (alarm[0] == -1) alarm[0] = 10;
+			if (alarm[0] == -1) alarm[0] = 20;
 		}
 	break;
 	
@@ -26,11 +26,29 @@ switch(estado)
 				var lado = sign(obj_player.y-y);
 				velv = lado * vel
 				y+=velv;
+			}else{
+				estado = "atacando";
 			}
 		}
-		
+			
+	break;
+	
+	case "atacando":
+		if (distancia_horizontal >= 24) or (distancia_vertical>1)
+		{
+			estado = "andando";
+		}else{
+			if (alarm[1] == -1)
+			{
+				alarm[1] = room_speed*2;
+			}
+		}
 	break;
 	
 	case "recebendo_dano":
+		if (alarm[2] == -1) 
+		{
+			alarm[2] = 20;
+		}
 	break;
 }

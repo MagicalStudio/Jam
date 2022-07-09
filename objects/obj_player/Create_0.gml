@@ -8,10 +8,14 @@ velv = 0;
 xscale = 1;
 yscale = 1;
 
+//ataques
+combo_fase = 0;
+tempo_padrao = 10;
+tempo_combo = tempo_padrao;
 
 // state machine
 estado = "parado";
 
-//camera configs 
-x_camera = 384;
-parte_da_cena = 0;
+//saude
+hp_max = 10;
+hp = hp_max;

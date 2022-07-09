@@ -70,8 +70,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "colisao",
+    "path": "folders/Sprites/colisao.yy",
   },
   "resourceVersion": "1.0",
   "tags": [],

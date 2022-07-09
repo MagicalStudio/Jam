@@ -15,7 +15,7 @@
   "collisionKind": 1,
   "type": 0,
   "swfPrecision": 2.525,
-  "width": 21,
+  "width": 22,
   "height": 36,
   "textureGroupId": {
     "name": "Default",
@@ -55,7 +55,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 10,
+    "xorigin": 11,
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,

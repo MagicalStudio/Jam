@@ -5,10 +5,10 @@ if (caixa_de_colisao)
 {
 	if (caixa_de_colisao.id!=ultimo_soco)
 	{
-		if (vida-- < 0) instance_destroy();
-		vida -= 1;		
+		if (hp-- < 0) instance_destroy();
+		hp -= 1;		
 		ultimo_soco=caixa_de_colisao.id;
-		estado = "recebendo_dano";
-		tempo_brilhando = 1;
+		audio_play_sound(snd_soco,1,false)
+		estado = "recebendo_dano";		
 	}
 }
