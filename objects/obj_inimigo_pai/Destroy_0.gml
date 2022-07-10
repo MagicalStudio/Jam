@@ -1,0 +1,1 @@
+if (global.inimigo01_avancando==id) global.inimigo01_avancando = false;

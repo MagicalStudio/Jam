@@ -1,22 +1,21 @@
 {
-  "name": "obj_inimigo_01",
   "spriteId": {
     "name": "spr_inimigo_01_parado",
     "path": "sprites/spr_inimigo_01_parado/spr_inimigo_01_parado.yy",
   },
+  "solid": false,
+  "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_player_colisao",
     "path": "sprites/spr_player_colisao/spr_player_colisao.yy",
   },
-  "visible": true,
-  "solid": false,
   "persistent": false,
-  "physicsObject": false,
-  "managed": true,
   "parentObjectId": {
     "name": "obj_inimigo_pai",
     "path": "objects/obj_inimigo_pai/obj_inimigo_pai.yy",
   },
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -35,6 +34,8 @@
     {"isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":2,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":3,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -43,6 +44,7 @@
     "path": "folders/Objects/inimigos/inimigo 01.yy",
   },
   "resourceVersion": "1.0",
+  "name": "obj_inimigo_01",
   "tags": [],
   "resourceType": "GMObject",
 }

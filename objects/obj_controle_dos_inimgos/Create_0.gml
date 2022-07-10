@@ -1,0 +1,1 @@
+global.inimigo01_avancando = false;

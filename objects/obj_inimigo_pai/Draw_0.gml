@@ -1,5 +1,7 @@
 draw_sprite_ext(sprite_index,image_index,x,y+z_pos,xscale,yscale,image_angle,c_white,1);
 
+draw_text(x,y-50,estado)
+
 if (alarm[2] > 0) or (z_pos!=0)
 {
 	gpu_set_fog(true,c_red,0,1);

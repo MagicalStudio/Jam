@@ -1,4 +1,4 @@
-
+randomize();
 // movimento
 vel = 1.5;
 velh = 0;
