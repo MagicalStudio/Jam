@@ -1,3 +1,4 @@
+draw_sprite(spr_sombra,0,x,bbox_bottom)
 draw_sprite_ext(sprite_index,image_index,x,y,xscale,yscale,image_angle,c_white,1);
 
 if (alarm[2] > 0)

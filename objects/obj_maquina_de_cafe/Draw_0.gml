@@ -1,3 +1,4 @@
+draw_sprite(spr_sombra,0,x,bbox_bottom)
 draw_sprite_ext(sprite_index,image_index,x,y,1,1,image_angle,c_white,image_alpha);
 if (alarm[2] > 0) && (!destruido)
 {

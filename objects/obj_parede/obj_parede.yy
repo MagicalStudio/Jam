@@ -1,17 +1,14 @@
 {
   "spriteId": {
-    "name": "spr_colisao_parede",
-    "path": "sprites/spr_colisao_parede/spr_colisao_parede.yy",
+    "name": "spr_parede",
+    "path": "sprites/spr_parede/spr_parede.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_colisao",
-    "path": "objects/obj_colisao/obj_colisao.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -28,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "colisao",
-    "path": "folders/Objects/colisao.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_colisao_parede",
+  "name": "obj_parede",
   "tags": [],
   "resourceType": "GMObject",
 }
