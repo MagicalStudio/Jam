@@ -63,8 +63,10 @@ switch(estado)
 		else xscale=-1;
 		
 		var dir = point_direction(x,y,obj_player.x,obj_player.y);
-		velh = lengthdir_x(vel,dir);
-		velv = lengthdir_y(vel,dir);
+		velh = lengthdir_x(vel*1.5,dir);
+		velv = lengthdir_y(vel*1.5,dir);
+		
+		if (global.inimigo01_avancando!=id) estado = "andando";
 		
 		if (distance_to_point(obj_player.x,obj_player.y) <= 20)
 		{
@@ -141,7 +143,7 @@ switch(estado)
 	
 	case "levantando":
 		if (global.inimigo01_avancando == id) global.inimigo01_avancando = false;
-		velv=-1;
+		//velv=-1;
 		image_angle = lerp(image_angle,0,.1);
 		if (round(image_angle)==0) estado = "andando";
 	break;
@@ -153,11 +155,7 @@ if (caixa_de_colisao) && (estado!="caido") && (estado!="levantando") && (estado!
 {
 	if (caixa_de_colisao.id!=ultimo_soco)
 	{
-		if (estado == "atacar")
-		{
-			estado = "voltar";
-		}
-		
+		criar_pop_up("+"+string(caixa_de_colisao.pontos),x,y-sprite_height);
 		global.score+=caixa_de_colisao.pontos;
 		if (hp-caixa_de_colisao.dano < 0)
 		{

@@ -1,9 +1,9 @@
 //input
 var left,down,up,right,soco
-left = keyboard_check(vk_left);
-down = keyboard_check(vk_down);
-right = keyboard_check(vk_right);
-up = keyboard_check(vk_up);
+left = keyboard_check(vk_left) or (keyboard_check(ord("A")));
+down = keyboard_check(vk_down) or (keyboard_check(ord("S")));
+right = keyboard_check(vk_right) or (keyboard_check(ord("D")));
+up = keyboard_check(vk_up) or (keyboard_check(ord("W")));
 soco = keyboard_check(ord("C"));
 //state machine
 switch(estado)
@@ -31,7 +31,7 @@ switch(estado)
 	case "socando":
 		if (alarm[0]==-1) tempo_combo--;
 		if (tempo_combo <=0) estado = "parado";
-		var tempo_ataque = 30;
+		var tempo_ataque = 20;
 				
 		velh = 0;	
 		velv = 0;

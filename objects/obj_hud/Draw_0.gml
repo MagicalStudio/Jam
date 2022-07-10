@@ -30,3 +30,14 @@ draw_set_color(c_white);
 draw_set_font(fnt_calibri);
 //desenhando energia
 draw_sprite(spr_barras_de_energia,obj_player.energia,cam_x+5+sprite_get_width(spr_rosto_personagem),6+sprite_get_height(spr_barra_de_vida))
+
+if (instance_exists(obj_inimigo_pai))
+{
+	if (!enemy_is_inside_view_camera(view_camera[0]))
+	{
+		draw_sprite(spr_seta_go,0,cam_x+camera_get_view_width(view_camera[0])-48,room_height/2)
+	}
+}else{
+	obj_camera.x_add = lerp(obj_camera.x_add,100,.25);
+	draw_sprite(spr_seta_go,0,cam_x+camera_get_view_width(view_camera[0])-48,room_height/2)
+}

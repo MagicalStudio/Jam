@@ -1,4 +1,11 @@
 depth = -bbox_bottom
+if (instance_place(x,y,obj_colisao))
+{
+	while(instance_place(x,y,obj_colisao))
+	{
+		y++;
+	}
+}
 
 if (place_meeting(x+velh,y,obj_colisao))
 {
