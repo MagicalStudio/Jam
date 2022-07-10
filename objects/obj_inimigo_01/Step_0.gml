@@ -141,7 +141,7 @@ switch(estado)
 	
 	case "levantando":
 		if (global.inimigo01_avancando == id) global.inimigo01_avancando = false;
-		velv=-.25;
+		velv=-1;
 		image_angle = lerp(image_angle,0,.1);
 		if (round(image_angle)==0) estado = "andando";
 	break;
