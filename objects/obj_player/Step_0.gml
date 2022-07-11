@@ -8,6 +8,7 @@ soco = keyboard_check(ord("C"));
 //state machine
 switch(estado)
 {
+	#region parado
 	case "parado":
 		tempo_combo = tempo_padrao;
 		combo_fase = 0;
@@ -17,7 +18,9 @@ switch(estado)
 		if (soco) estado = "socando";
 		sprite_index = asset_get_index("spr_player_"+string(estado));
 	break;
+	#endregion
 	
+	#region andando
 	case "andando":
 		combo_fase = 0;
 		tempo_combo = tempo_padrao;
@@ -27,7 +30,9 @@ switch(estado)
 		if (soco) estado = "socando";
 		sprite_index = asset_get_index("spr_player_"+string(estado));
 	break;
+	#endregion
 	
+	#region socando
 	case "socando":
 		if (alarm[0]==-1) tempo_combo--;
 		if (tempo_combo <=0) estado = "parado";
@@ -59,7 +64,9 @@ switch(estado)
 			}
 		}
 	break;
+	#endregion
 	
+	#region recebendo_dano	
 	case "recebendo_dano":
 		combo_fase = 0;
 		tempo_combo=tempo_padrao;
@@ -68,8 +75,53 @@ switch(estado)
 			alarm[2] = 10;
 		}
 	break;
+	#endregion
+	
+	#region knockback
+	
+	case "knockback":
+	
+		z_pos+=z_pos_add;
+		if (z_pos>-16) && (subir)
+		{ 
+			z_pos_add-=.25;
+		}else{
+			subir = false;
+			z_pos_add+=.25;
+			if (z_pos>=0)
+			{
+				subir = true;
+				estado = "caido";
+				z_pos = 0;
+				z_pos_add = -2;
+			}
+		}
+		image_angle+=2.2 * xscale;
+		velh = xscale*2*-1;
+		velv = 0;
+	
+	break;
+	
+	#endregion
+	
+	#region caido
+	case "caido":
+		velv = 0;
+		velh = 0;
+		if (alarm[3]==-1) alarm[3] = room_speed;
+	break;
+	#endregion
+	
+	#region levantando
+	case "levantando":
+		//velv=-1;
+		image_angle = lerp(image_angle,0,.1);
+		if (round(image_angle)==0) estado = "parado";
+	break;
+	#endregion
 }
-if (velh!=0)
+
+if (velh!=0) && (estado!="knockback") && (estado!="caido") && (estado!="levantando")
 {
 	xscale = sign(velh);
 }

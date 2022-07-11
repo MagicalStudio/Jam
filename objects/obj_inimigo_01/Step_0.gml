@@ -1,6 +1,7 @@
 event_inherited();
 
 //state machine
+sprite_index = asset_get_index("spr_inimigo_01_parado_"+string(skin))
 
 switch(estado)
 {

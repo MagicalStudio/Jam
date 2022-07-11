@@ -1,4 +1,5 @@
 
+
 var golpeado = instance_place(x,y,obj_player_golpe);
 var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
@@ -35,8 +36,17 @@ if (golpeado) && (!destruido) or (golpeado_por_inimigo)
 				velv = -spd;
 				image_alpha = .5;
 				instance_create_depth(x,y,depth,obj_cafe,{y_destino : bbox_bottom-10});
+				
+				repeat(2)
+				{
+					var xx = irandom_range(bbox_left,bbox_right);
+					var yy = irandom_range(bbox_bottom,bbox_top);
+					
+					instance_create_depth(xx,yy,depth,obj_explosao);
+				}
+				
 			}
-		
+				
 			alarm[2] = 30;
 		
 			global.score+=golpeado.pontos;

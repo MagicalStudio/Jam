@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_inimigo_01_parado",
-    "path": "sprites/spr_inimigo_01_parado/spr_inimigo_01_parado.yy",
+    "name": "spr_inimigo_01_parado_1",
+    "path": "sprites/spr_inimigo_01_parado_1/spr_inimigo_01_parado_1.yy",
   },
   "solid": false,
   "visible": true,

@@ -11,3 +11,6 @@ hp = hp_max;
 
 //atacar
 timer_para_avancar = 40;
+
+//skin
+skin = 1+irandom(1);
