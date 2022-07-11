@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_explosao_impressora",
-    "path": "sprites/spr_explosao_impressora/spr_explosao_impressora.yy",
+    "name": "spr_inimigo_01_soco",
+    "path": "sprites/spr_inimigo_01_soco/spr_inimigo_01_soco.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,11 +28,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "coisa para deixar bonito",
-    "path": "folders/Objects/coisa para deixar bonito.yy",
+    "name": "inimigo 02",
+    "path": "folders/Objects/inimigos/inimigo 02.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_explosao",
+  "name": "obj_inimigo_02_taser",
   "tags": [],
   "resourceType": "GMObject",
 }

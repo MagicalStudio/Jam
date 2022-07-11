@@ -1,0 +1,1 @@
+image_speed=1+irandom_range(.5,1);

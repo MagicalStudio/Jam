@@ -32,6 +32,7 @@
     {"id":{"name":"spr_inimigo_01_parado_2","path":"sprites/spr_inimigo_01_parado_2/spr_inimigo_01_parado_2.yy",},"order":1,},
     {"id":{"name":"obj_player_soco","path":"objects/obj_player_soco/obj_player_soco.yy",},"order":1,},
     {"id":{"name":"spr_sombra_pequena","path":"sprites/spr_sombra_pequena/spr_sombra_pequena.yy",},"order":1,},
+    {"id":{"name":"obj_inimigo_02_taser","path":"objects/obj_inimigo_02_taser/obj_inimigo_02_taser.yy",},"order":2,},
     {"id":{"name":"snd_soco","path":"sounds/snd_soco/snd_soco.yy",},"order":1,},
     {"id":{"name":"spr_player_parado","path":"sprites/spr_player_parado/spr_player_parado.yy",},"order":1,},
     {"id":{"name":"obj_inimigo_pai","path":"objects/obj_inimigo_pai/obj_inimigo_pai.yy",},"order":0,},

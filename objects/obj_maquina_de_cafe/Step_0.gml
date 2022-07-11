@@ -19,7 +19,15 @@ if (golpeado) && (!destruido) or (golpeado_por_inimigo)
 				image_alpha = .5;
 				instance_create_depth(x,y,depth,obj_cafe,{y_destino : bbox_bottom-10});
 			}
-		
+			
+			repeat(6)
+			{
+				var xx = irandom_range(bbox_left,bbox_right);
+				var yy = irandom_range(y,bbox_top);
+					
+				instance_create_depth(xx,yy,depth,obj_explosao);
+			}
+			
 			alarm[2] = 30;
 		
 			global.score+=500;
@@ -37,10 +45,10 @@ if (golpeado) && (!destruido) or (golpeado_por_inimigo)
 				image_alpha = .5;
 				instance_create_depth(x,y,depth,obj_cafe,{y_destino : bbox_bottom-10});
 				
-				repeat(2)
+				repeat(6)
 				{
 					var xx = irandom_range(bbox_left,bbox_right);
-					var yy = irandom_range(bbox_bottom,bbox_top);
+					var yy = irandom_range(y,bbox_top);
 					
 					instance_create_depth(xx,yy,depth,obj_explosao);
 				}
