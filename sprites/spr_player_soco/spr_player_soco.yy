@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "colisoes",
-    "path": "folders/colisoes.yy",
+    "path": "folders/Sprites/player/colisoes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_player_soco",

@@ -1,2 +1,2 @@
- ///@desc tempo no knockback
+  ///@desc tempo no knockback
 estado = "andando";

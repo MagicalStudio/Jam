@@ -8,5 +8,4 @@ subir = true;
 ultimo_soco = noone;
 variancia = irandom_range(-16,16);
 //state machine
-estado = "parado";
-knockback_force = 10;
+estado = "parado"

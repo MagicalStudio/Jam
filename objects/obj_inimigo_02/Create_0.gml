@@ -14,4 +14,4 @@ timer_para_avancar = 40;
 ataque = "taser";
 
 //skin
-skin = 1+irandom(1);
+skin = 1

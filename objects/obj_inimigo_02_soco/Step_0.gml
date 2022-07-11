@@ -1,9 +1,15 @@
-var player = instance_place(x,y,obj_player)
-
-if (player)
+if (!global.especial_ativo)
 {
-	player.hp -= dano;
-	player.estado = "recebendo_dano";
+	var player = instance_place(x,y,obj_player)
+
+	if (player)
+	{
+		if (player.estado!="knockback") && (player.estado!="caido") && (player.estado!="levantando") && (player.estado!="especial")
+		{
+			player.hp -= dano;
+			player.estado = "recebendo_dano";
+		}
+	}
 }
 
 instance_destroy();

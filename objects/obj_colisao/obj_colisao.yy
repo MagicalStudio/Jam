@@ -1,16 +1,15 @@
 {
-  "name": "obj_colisao",
   "spriteId": {
     "name": "spr_colisao",
     "path": "sprites/spr_colisao/spr_colisao.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": null,
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -30,6 +29,7 @@
     "path": "folders/Objects/colisao.yy",
   },
   "resourceVersion": "1.0",
+  "name": "obj_colisao",
   "tags": [],
   "resourceType": "GMObject",
 }

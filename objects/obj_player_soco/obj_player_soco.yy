@@ -1,19 +1,18 @@
 {
-  "name": "obj_player_soco",
   "spriteId": {
     "name": "spr_player_soco",
     "path": "sprites/spr_player_soco/spr_player_soco.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": {
     "name": "obj_player_golpe",
     "path": "objects/obj_player_golpe/obj_player_golpe.yy",
   },
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -36,6 +35,7 @@
     "path": "folders/Objects/player.yy",
   },
   "resourceVersion": "1.0",
+  "name": "obj_player_soco",
   "tags": [],
   "resourceType": "GMObject",
 }
