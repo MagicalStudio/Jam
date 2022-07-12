@@ -1,11 +1,8 @@
-
-
 var golpeado = instance_place(x,y,obj_player_golpe);
 var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
 if (golpeado) or (golpeado_por_inimigo) && (!destruido)
-{
-
+{	
 	if (golpeado_por_inimigo)
 	{
 		if (golpeado_por_inimigo.estado == "knockback") && (golpeado_por_inimigo.id != ultimo_golpe_inimigo)
@@ -60,17 +57,6 @@ if (hp<=0) && (!destruido)
 		{
 			instance_destroy(list_[| i],false);
 			instance_create_depth(list_[| i].x,list_[| i].y,depth,obj_inimigo_voando_carbonizado,{image_xscale : sign(x-list_[| i].x), sprite_index : list_[| i].sprite_index });
-		}
-	}
-	ds_list_destroy(list_);
-	
-	var list_ = ds_list_create();
-	var ellipse_collision = collision_ellipse_list(x-60,y-60,x+60,y+60,obj_impressora_colisao,true,true,list_,true);
-	if (ellipse_collision > 0)
-	{
-		for (var i = 0; i < ellipse_collision; i++)
-		{
-			list_[| i].hp = 0;
 		}
 	}
 	ds_list_destroy(list_);

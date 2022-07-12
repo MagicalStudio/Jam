@@ -1,2 +1,2 @@
- ///@desc tempo no knockback
-estado = "andando";
+///@desc tempo para parar de seguir
+seguindo = false;

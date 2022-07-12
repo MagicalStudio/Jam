@@ -3,7 +3,7 @@
 var golpeado = instance_place(x,y,obj_player_golpe);
 var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
-if (golpeado) && (!destruido) or (golpeado_por_inimigo)
+if (golpeado) or (golpeado_por_inimigo) && (!destruido)
 {	
 	if (golpeado_por_inimigo)
 	{

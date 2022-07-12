@@ -1,3 +1,3 @@
-///@desc espera para andar
-estado = "andando";
-x_y_voltar = [0,0];
+///@desc escolher entre atacar pulando ou no chifre
+ataque_escolhido = choose("chifre","pulo");
+estado = "atacando";

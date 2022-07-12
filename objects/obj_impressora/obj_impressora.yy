@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "obj_interativeis",
-    "path": "folders/Objects/obj_interativeis.yy",
+    "name": "impressora",
+    "path": "folders/Objects/obj_interativeis/impressora.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_impressora",

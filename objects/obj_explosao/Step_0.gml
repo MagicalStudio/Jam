@@ -1,4 +1,3 @@
-y--;
-image_alpha-=.01;
+image_alpha-=.025;
 
-if (y < -sprite_height) instance_destroy();
+if (image_alpha <= 0) instance_destroy();

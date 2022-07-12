@@ -1,18 +1,25 @@
-event_inherited();
-
-//movimento
-vel = 1+random(.5);
+//movimentação
 velh = 0;
 velv = 0;
+spd  = .5;
 
-//saude
-hp_max = 7;
-hp = hp_max;
-
-//atacar
-timer_para_avancar = 40;
-
-//skin
-skin = 1+irandom(1);
-
+//estados
 estado = "parado";
+ataque_escolhido = "pulo";
+comeco_atacar = false;
+
+//ataques
+
+//chifre
+direcao_correr = 0;
+
+//pulo
+seguindo = false;
+caindo = false;
+
+//draw
+xscale = 1;
+yscale = 1;
+z_pos_add = 0;
+z_pos = 0;
+
