@@ -6,6 +6,7 @@ if (player)
 	{
 		player.hp -= dano;
 		player.estado = "recebendo_dano";
+		instance_create_depth(x,y,depth,obj_impacto);
 	}
 }
 

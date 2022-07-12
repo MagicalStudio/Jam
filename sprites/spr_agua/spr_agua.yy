@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "objetos interativeis",
-    "path": "folders/Sprites/objetos interativeis.yy",
+    "name": "maquinas",
+    "path": "folders/Sprites/objetos interativeis/maquinas.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_agua",

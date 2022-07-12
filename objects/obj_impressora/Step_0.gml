@@ -3,8 +3,8 @@
 var golpeado = instance_place(x,y,obj_player_golpe);
 var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
-if (golpeado) or (golpeado_por_inimigo) && (!destruido)
-{	
+if (!destruido)
+{
 	if (golpeado_por_inimigo)
 	{
 		if (golpeado_por_inimigo.estado == "knockback") && (golpeado_por_inimigo.id != ultimo_golpe_inimigo)
@@ -15,7 +15,10 @@ if (golpeado) or (golpeado_por_inimigo) && (!destruido)
 			global.score+=500;
 			criar_pop_up("+500",x,y-sprite_height/2);
 		}
-	}else{
+	}
+	
+	if (golpeado)
+	{
 		if (golpeado.id!=ultimo_golpe)
 		{		
 			if (golpeado.x > x)

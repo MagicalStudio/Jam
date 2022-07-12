@@ -220,7 +220,7 @@ if (!global.especial_ativo)
 		#endregion
 	}
 }else{
-	if (alarm[5] == -1)
+	if (alarm[5] == -1) && (instance_exists(obj_prancheta))
 	{
 		alarm[5] = 30;
 	}

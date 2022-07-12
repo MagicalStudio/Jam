@@ -226,7 +226,7 @@ if (!global.especial_ativo)
 		#endregion
 	}
 }else{
-	if (alarm[5] == -1)
+	if (alarm[5] == -1) && (instance_exists(obj_prancheta))
 	{
 		sprite_index = asset_get_index("spr_inimigo_01_apanhando_"+string(skin))
 		alarm[5] = 30;
