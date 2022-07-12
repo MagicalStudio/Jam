@@ -22,6 +22,8 @@ if (caixa_de_colisao) && (estado!="caido") && (estado!="levantando") && (estado!
 		if (caixa_de_colisao.object_index == obj_player_gancho)
 		{
 			estado = "knockback";
+			obj_player.energia+=1;
+			if (obj_player.energia >= 12) obj_player.energia = 12;
 		}else{
 			estado = "recebendo_dano";
 		}

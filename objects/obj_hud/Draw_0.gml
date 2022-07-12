@@ -41,6 +41,9 @@ if (instance_exists(obj_inimigo_pai))
 		draw_sprite(spr_seta_go,0,cam_x+camera_get_view_width(view_camera[0])-48,room_height/2)
 	}
 }else{
-	obj_camera.x_add = lerp(obj_camera.x_add,100,.25);
-	draw_sprite(spr_seta_go,0,cam_x+camera_get_view_width(view_camera[0])-48,room_height/2)
+	if (room == rm_corredor)
+	{
+		obj_camera.x_add = lerp(obj_camera.x_add,100,.25);
+		draw_sprite(spr_seta_go,0,cam_x+camera_get_view_width(view_camera[0])-48,room_height/2)
+	}
 }

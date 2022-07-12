@@ -5,11 +5,12 @@ var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
 if (golpeado) && (!destruido) or (golpeado_por_inimigo)
 {
-	audio_play_sound(snd_soco,1,false)
+
 	if (golpeado_por_inimigo)
 	{
 		if (golpeado_por_inimigo.estado == "knockback") && (golpeado_por_inimigo.id != ultimo_golpe_inimigo)
 		{
+			audio_play_sound(snd_soco,1,false)
 			hp -= hp;
 		 	alarm[2] = 30;
 			global.score+=500;
@@ -18,6 +19,7 @@ if (golpeado) && (!destruido) or (golpeado_por_inimigo)
 	}else{
 		if (golpeado.id!=ultimo_golpe)
 		{			
+			audio_play_sound(snd_soco,1,false)
 			hp-=golpeado.dano;
 			alarm[2] = 30;
 			global.score+=golpeado.pontos;
@@ -34,6 +36,11 @@ if (hp<=0) && (!destruido)
 	velh = spd * sign(x-obj_player.x);
 	velv = -spd;
 	image_alpha = .5;
+	
+	if (!audio_is_playing(snd_explosao))
+	{
+		audio_play_sound(snd_explosao,3,0);
+	}
 	
 	instance_create_depth(x,y,depth,obj_vermelho_explosao)
 			
@@ -58,7 +65,7 @@ if (hp<=0) && (!destruido)
 	ds_list_destroy(list_);
 	
 	var list_ = ds_list_create();
-	var ellipse_collision = collision_ellipse_list(x-60,y-10,x+60,y+10,obj_impressora_colisao,true,true,list_,true);
+	var ellipse_collision = collision_ellipse_list(x-60,y-60,x+60,y+60,obj_impressora_colisao,true,true,list_,true);
 	if (ellipse_collision > 0)
 	{
 		for (var i = 0; i < ellipse_collision; i++)

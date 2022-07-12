@@ -1,0 +1,45 @@
+{
+  "name": "tl_enfeites",
+  "spriteId": {
+    "name": "spr_tile",
+    "path": "sprites/spr_tile/spr_tile.yy",
+  },
+  "tileWidth": 40,
+  "tileHeight": 80,
+  "tilexoff": 2,
+  "tileyoff": 0,
+  "tilehsep": 2,
+  "tilevsep": 0,
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "out_columns": 2,
+  "tile_count": 3,
+  "autoTileSets": [],
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 5.0,
+  "tileAnimation": {
+    "FrameData": [
+      0,
+      1,
+      2,
+    ],
+    "SerialiseFrameCount": 1,
+  },
+  "macroPageTiles": {
+    "SerialiseWidth": 0,
+    "SerialiseHeight": 0,
+    "TileSerialiseData": [],
+  },
+  "parent": {
+    "name": "tileset",
+    "path": "folders/Sprites/cenario/tileset.yy",
+  },
+  "resourceVersion": "1.0",
+  "tags": [],
+  "resourceType": "GMTileSet",
+}

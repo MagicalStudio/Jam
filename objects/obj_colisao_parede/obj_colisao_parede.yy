@@ -4,7 +4,7 @@
     "path": "sprites/spr_colisao_parede/spr_colisao_parede.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
