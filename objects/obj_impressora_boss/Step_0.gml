@@ -15,7 +15,13 @@ if (golpeado) or (golpeado_por_inimigo) && (!destruido)
 		}
 	}else{
 		if (golpeado.id!=ultimo_golpe)
-		{			
+		{	
+			if (golpeado.x > x)
+			{
+				instance_create_depth(bbox_right,y,-300,obj_impacto);
+			}else{
+				instance_create_depth(bbox_left,y,-300,obj_impacto);
+			}
 			audio_play_sound(snd_soco,1,false)
 			hp-=golpeado.dano;
 			alarm[2] = 30;

@@ -1,5 +1,4 @@
 {
-  "name": "tl_enfeites",
   "spriteId": {
     "name": "spr_tile",
     "path": "sprites/spr_tile/spr_tile.yy",
@@ -10,13 +9,13 @@
   "tileyoff": 0,
   "tilehsep": 2,
   "tilevsep": 0,
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
   },
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
   "out_columns": 2,
   "tile_count": 3,
   "autoTileSets": [],
@@ -40,6 +39,7 @@
     "path": "folders/Sprites/cenario/tileset.yy",
   },
   "resourceVersion": "1.0",
+  "name": "tl_enfeites",
   "tags": [],
   "resourceType": "GMTileSet",
 }

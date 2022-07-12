@@ -1,5 +1,8 @@
 event_inherited();
 
+#region state machine antiga que nao presta
+/* state machine antiga
+
 //state machine
 sprite_index = asset_get_index("spr_inimigo_01_parado_"+string(skin))
 
@@ -157,3 +160,6 @@ if (!global.especial_ativo)
 		alarm[5] = room_speed;
 	}
 }
+
+*/
+#endregion

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_impacto",
+    "path": "sprites/spr_impacto/spr_impacto.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -18,15 +21,18 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "obj_interativeis",
-    "path": "folders/Objects/obj_interativeis.yy",
+    "name": "coisa para deixar bonito",
+    "path": "folders/Objects/coisa para deixar bonito.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_impressora_pai",
+  "name": "obj_impacto",
   "tags": [],
   "resourceType": "GMObject",
 }
