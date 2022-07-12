@@ -136,11 +136,47 @@ switch(estado)
 	
 	#region especial
 	case "especial":
-		z_pos = lerp(z_pos,-15,.1);
-		if (alarm[1]==-1)
+		var x_ = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])/2
+		if (x!=clamp(x,x_-1,x_+1))
 		{
-			audio_play_sound(snd_especial,2,0)
-			alarm[1] = room_speed * 3;
+			z_pos = lerp(z_pos,-15,.1);
+			x = lerp(x,x_,.1);
+			show_debug_message(string(x)+"\ndestiny : "+string(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])/2))
+			y = lerp(y,room_height-32-sprite_height/2,.1);
+		}else{
+			z_pos = lerp(z_pos,-15,.1);
+			if (alarm[1]==-1)
+			{
+				espaco_pranchetas = 32;
+		
+				//criando pranchetas
+				for (var i = 1; i < 7; i++)
+				{
+					if (i mod 2 == 0)
+					{	
+						value = 1;
+					}else{
+						value = -1;
+					}
+					if (i <=3) // pranchetas direitas
+					{
+						var definicoes = 
+						{
+							x_destino : x+espaco_pranchetas * i,
+							angle_add : value
+						}
+					}else{ // pranchetas esquerdas
+						var definicoes = 
+						{
+							x_destino : x+-espaco_pranchetas * (i-3),
+							angle_add : value
+						}
+					}
+					instance_create_depth(x,y,depth-1,obj_prancheta,definicoes);
+				}
+				audio_play_sound(snd_especial,2,0)
+				alarm[1] = room_speed * 3;
+			}
 		}
 	break;
 	#endregion
