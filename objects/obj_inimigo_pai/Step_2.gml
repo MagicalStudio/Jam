@@ -1,9 +1,10 @@
 var caixa_de_colisao = collision_rectangle(x-10,bbox_top,x+10,y,obj_player_golpe,true,true);
-if (caixa_de_colisao) && (estado!="caido") && (estado!="levantando") && (estado!="knockback")
+if (caixa_de_colisao) && (estado!="caido") && (estado!="levantando") && (estado!="knockback") // tomando dano
 {
 	if (caixa_de_colisao.id!=ultimo_soco)
 	{
 		criar_pop_up("+"+string(caixa_de_colisao.pontos),x,y-sprite_height);
+		instance_create_depth(x+sprite_width/2*xscale,y,depth,obj_impacto)
 		global.score+=caixa_de_colisao.pontos;
 		if (hp-caixa_de_colisao.dano < 0)
 		{
@@ -39,7 +40,7 @@ if (instance_place(x,y,obj_colisao))
 	}
 }
 
-if (!global.especial_ativo)
+if (!global.especial_ativo) // colisao
 {
 	if (place_meeting(x+velh,y,obj_colisao))
 	{
@@ -64,4 +65,10 @@ if (!global.especial_ativo)
 	}
 
 	y+=velv;
+	
+	if (y!=clamp(y,0,room_height-sprite_height/2))
+	{
+		estado = "parado";
+		y = clamp(y, 0, room_height-sprite_height/2);
+	}
 }

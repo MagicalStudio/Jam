@@ -1,2 +1,2 @@
-///@desc demora para levantar
+ ///@desc demora para levantar
 estado = "levantando";

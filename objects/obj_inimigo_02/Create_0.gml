@@ -4,14 +4,19 @@ event_inherited();
 vel = 1+random(.5);
 velh = 0;
 velv = 0;
+direcao_andar = 0;
+direcao_voltar = 0;
+distancia_voltar = 60;
+variancia = 80;
 
 //saude
 hp_max = 7;
 hp = hp_max;
 
-//batalha
+//atacar
 timer_para_avancar = 40;
-ataque = "taser";
+escolhido_para_atacar = false;
+ataque = 0;
 
-//skin
-skin = 1
+//skin 
+skin = 1;
