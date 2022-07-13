@@ -5,7 +5,7 @@ spd  = 1;
 
 //estados
 estado = "parado";
-ataque = "pulo";
+ataque = "0";
 
 //ataques
 

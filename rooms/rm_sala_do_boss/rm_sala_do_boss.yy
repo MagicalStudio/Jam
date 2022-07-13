@@ -24,7 +24,8 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_609AC19C","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_controle_dos_inimigos","path":"objects/obj_controle_dos_inimigos/obj_controle_dos_inimigos.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_96145D4","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_impressora","path":"objects/obj_impressora/obj_impressora.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":139.0,"y":96.0,"resourceVersion":"1.0","name":"inst_640320CD","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_maquina_de_cafe","path":"objects/obj_maquina_de_cafe/obj_maquina_de_cafe.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":180.0,"y":54.0,"resourceVersion":"1.0","name":"inst_6073BB9B","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_maquina_de_agua","path":"objects/obj_maquina_de_agua/obj_maquina_de_agua.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":79.0,"y":54.0,"resourceVersion":"1.0","name":"inst_4B1AC894","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"hud","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_chefe","path":"objects/obj_chefe/obj_chefe.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":204.5,"y":95.0,"resourceVersion":"1.0","name":"inst_7709A13D","tags":[],"resourceType":"GMRInstance",},
@@ -44,7 +45,8 @@
     {"name":"inst_227E4CFD","path":"rooms/rm_sala_do_boss/rm_sala_do_boss.yy",},
     {"name":"inst_20E5E67D","path":"rooms/rm_sala_do_boss/rm_sala_do_boss.yy",},
     {"name":"inst_471E9F5B","path":"rooms/rm_sala_do_boss/rm_sala_do_boss.yy",},
-    {"name":"inst_640320CD","path":"rooms/rm_sala_do_boss/rm_sala_do_boss.yy",},
+    {"name":"inst_6073BB9B","path":"rooms/rm_sala_do_boss/rm_sala_do_boss.yy",},
+    {"name":"inst_4B1AC894","path":"rooms/rm_sala_do_boss/rm_sala_do_boss.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

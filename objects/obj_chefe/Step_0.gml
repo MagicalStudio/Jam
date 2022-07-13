@@ -98,7 +98,11 @@ switch(estado)
 			
 			#region impressora
 			case "impressora":
-				alarm[1] = room_speed/4;
+				if (!instance_exists(obj_impressora_boss_fight))
+				{
+					instance_create_depth(-100,-100,depth,obj_impressora_boss_fight);
+					alarm[3] = room_speed * 6;
+				}
 			break;
 			#endregion
 		}

@@ -17,6 +17,7 @@ switch(estado)
 		tempo_combo = tempo_padrao;
 		combo_fase = 0;
 		z_pos = lerp(z_pos,0,.1);
+		image_angle = lerp(image_angle,0,.1);
 		if (velv!=0 or velh!=0) estado = "andando";
 		if (soco) estado = "socando";
 		if (especial) ativar_especial();
@@ -26,6 +27,7 @@ switch(estado)
 	
 	#region andando
 	case "andando":
+		image_angle = lerp(image_angle,0,.1);
 		if (velv!=0 or velh!=0)
 		{
 			combo_fase = 0;
@@ -45,6 +47,7 @@ switch(estado)
 	
 	#region socando
 	case "socando":
+		image_angle = lerp(image_angle,0,.1);
 		z_pos = lerp(z_pos,0,.1);
 		if (alarm[0]==-1) tempo_combo--;
 		if (tempo_combo <=0) estado = "parado";
@@ -82,6 +85,7 @@ switch(estado)
 	
 	#region recebendo_dano	
 	case "recebendo_dano":
+		image_angle = lerp(image_angle,0,.1);
 		z_pos = lerp(z_pos,0,.1);
 		combo_fase = 0;
 		tempo_combo=tempo_padrao;
@@ -142,6 +146,7 @@ switch(estado)
 	
 	#region especial
 	case "especial":
+	image_angle = lerp(image_angle,0,.1);
 		var x_ = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])/2
 		if (x!=clamp(x,x_-1,x_+1))
 		{
