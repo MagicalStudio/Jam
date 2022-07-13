@@ -13,5 +13,5 @@ if (estado=="atacar")
 		break;
 	}
 	estado = "ataquei";
-	alarm[4] = room_speed;
+	alarm[4] = room_speed/2;
 }

@@ -9,6 +9,8 @@ if (!global.especial_ativo)
 		
 		#region parado
 		case "parado":
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			sprite_index = asset_get_index("spr_inimigo_01_parado_"+string(skin))
 			if (escolhido_para_atacar)
 			{
@@ -19,7 +21,7 @@ if (!global.especial_ativo)
 			velh = 0;
 			velv = 0;
 		
-			if (instance_inside_view_camera(view_camera[0]))
+			if (instance_inside_view_camera(view_camera[0])) or (!pode_usar_clamp) && (y > room_height+sprite_height/2)
 			{
 				if (alarm[0]==-1) alarm[0] = room_speed;
 			}
@@ -29,7 +31,8 @@ if (!global.especial_ativo)
 		
 		#region andando
 		case "andando":
-		
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			sprite_index = asset_get_index("spr_inimigo_01_parado_"+string(skin))
 			if (escolhido_para_atacar)
 			{
@@ -55,7 +58,8 @@ if (!global.especial_ativo)
 	
 		#region atacando
 		case "atacando":
-		
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 	
@@ -101,6 +105,8 @@ if (!global.especial_ativo)
 		
 		#region atacar
 		case "atacar":
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			sprite_index = asset_get_index("spr_inimigo_01_armando_"+string(skin))
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
@@ -115,6 +121,8 @@ if (!global.especial_ativo)
 		
 		#region ataquei
 		case "ataquei":
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			sprite_index = asset_get_index("spr_inimigo_01_soco_"+string(skin))
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
@@ -124,7 +132,8 @@ if (!global.especial_ativo)
 		
 		#region voltar
 		case "voltar":
-			
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;	
 			
@@ -149,6 +158,8 @@ if (!global.especial_ativo)
 		
 		#region recebendo_dano
 		case "recebendo_dano":
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			velv = 0;
 			velh = 0;
 			

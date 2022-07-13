@@ -9,6 +9,8 @@ if (!global.especial_ativo)
 		
 		#region parado
 		case "parado":
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
@@ -18,7 +20,7 @@ if (!global.especial_ativo)
 			velh = 0;
 			velv = 0;
 		
-			if (instance_inside_view_camera(view_camera[0]))
+			if (instance_inside_view_camera(view_camera[0])) or (!pode_usar_clamp) && (y > room_height+sprite_height/2)
 			{
 				if (alarm[0]==-1) alarm[0] = room_speed;
 			}
@@ -28,7 +30,8 @@ if (!global.especial_ativo)
 		
 		#region andando
 		case "andando":
-		
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
@@ -53,7 +56,8 @@ if (!global.especial_ativo)
 	
 		#region atacando
 		case "atacando":
-		
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 	
@@ -99,7 +103,8 @@ if (!global.especial_ativo)
 		
 		#region atacar
 		case "atacar":
-
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 	
@@ -113,7 +118,8 @@ if (!global.especial_ativo)
 		
 		#region ataquei
 		case "ataquei":
-
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 			
@@ -122,7 +128,8 @@ if (!global.especial_ativo)
 		
 		#region voltar
 		case "voltar":
-			
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;	
 			
@@ -148,7 +155,8 @@ if (!global.especial_ativo)
 		case "recebendo_dano":
 			velv = 0;
 			velh = 0;
-				
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
@@ -179,7 +187,7 @@ if (!global.especial_ativo)
 					z_pos_add = -2;
 				}
 			}
-			image_angle+=2.2 * xscale;
+			image_angle+=3 * xscale;
 			velh = xscale*2*-1;
 			velv = 0;
 			
@@ -222,7 +230,7 @@ if (!global.especial_ativo)
 }else{
 	if (alarm[5] == -1) && (instance_exists(obj_prancheta))
 	{
-		alarm[5] = 30;
+		alarm[5] = room_speed/2;
 	}
 }
 

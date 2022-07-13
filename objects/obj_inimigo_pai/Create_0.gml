@@ -9,3 +9,4 @@ ultimo_soco = noone;
 variancia = irandom_range(-16,16);
 //state machine
 estado = "parado"
+pode_usar_clamp = false;

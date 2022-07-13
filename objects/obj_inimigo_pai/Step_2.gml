@@ -66,7 +66,12 @@ if (!global.especial_ativo) // colisao
 
 	y+=velv;
 	
-	if (y!=clamp(y,0,room_height-sprite_height/2))
+	if (instance_inside_view_camera(view_camera[0])) && (!pode_usar_clamp)
+	{
+		pode_usar_clamp = true;
+	}
+	
+	if (pode_usar_clamp)&&(y!=clamp(y,0,room_height-sprite_height/2))
 	{
 		estado = "parado";
 		y = clamp(y, 0, room_height-sprite_height/2);

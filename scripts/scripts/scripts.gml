@@ -10,13 +10,11 @@ function instance_inside_view_camera(){
 	var cam_height = camera_get_view_height(cam);
 	var cam_y = camera_get_view_y(cam);
 			
-	if (point_in_rectangle(x,y,cam_x,cam_y,cam_x+cam_width,cam_y+cam_height))
+	if (point_in_rectangle(x,y,cam_x,cam_y,cam_x+cam_width,cam_y+cam_height-sprite_height/3))
 	{
 		return true;
 	}
-	
-	return false;
-	
+	return false;	
 }
 
 ///@func enemy_is_inside_view_camera()

@@ -1,5 +1,5 @@
 global.especial_ativo = false;
-global.especial_dano = 3;
+global.especial_dano = 1.5;
 global.pontos_especial = 300;
 
 randomize();

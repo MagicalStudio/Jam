@@ -17,5 +17,7 @@ hp = hp_max;
 timer_para_avancar = 40;
 escolhido_para_atacar = false;
 
+dentro_da_tela = false;
+
 //skin
 skin = 1+irandom(1);
