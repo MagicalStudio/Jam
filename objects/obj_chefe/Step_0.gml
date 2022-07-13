@@ -71,5 +71,3 @@ switch(estado)
 	
 	break;
 }
-
-show_debug_message(estado);

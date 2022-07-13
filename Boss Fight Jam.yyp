@@ -15,6 +15,7 @@
     {"id":{"name":"spr_barra_de_vida","path":"sprites/spr_barra_de_vida/spr_barra_de_vida.yy",},"order":1,},
     {"id":{"name":"spr_player_andando","path":"sprites/spr_player_andando/spr_player_andando.yy",},"order":0,},
     {"id":{"name":"obj_impacto","path":"objects/obj_impacto/obj_impacto.yy",},"order":4,},
+    {"id":{"name":"obj_placa","path":"objects/obj_placa/obj_placa.yy",},"order":0,},
     {"id":{"name":"spr_tile","path":"sprites/spr_tile/spr_tile.yy",},"order":0,},
     {"id":{"name":"obj_inimigo_voando_carbonizado","path":"objects/obj_inimigo_voando_carbonizado/obj_inimigo_voando_carbonizado.yy",},"order":4,},
     {"id":{"name":"spr_prancheta","path":"sprites/spr_prancheta/spr_prancheta.yy",},"order":5,},
@@ -77,6 +78,7 @@
     {"id":{"name":"spr_inimigo_01_soco_1","path":"sprites/spr_inimigo_01_soco_1/spr_inimigo_01_soco_1.yy",},"order":2,},
     {"id":{"name":"spr_player_socando","path":"sprites/spr_player_socando/spr_player_socando.yy",},"order":2,},
     {"id":{"name":"obj_player_golpe","path":"objects/obj_player_golpe/obj_player_golpe.yy",},"order":4,},
+    {"id":{"name":"spr_placas","path":"sprites/spr_placas/spr_placas.yy",},"order":5,},
     {"id":{"name":"spr_seta_go","path":"sprites/spr_seta_go/spr_seta_go.yy",},"order":3,},
     {"id":{"name":"spr_inimigo_01_soco","path":"sprites/spr_inimigo_01_soco/spr_inimigo_01_soco.yy",},"order":2,},
     {"id":{"name":"spr_impressora","path":"sprites/spr_impressora/spr_impressora.yy",},"order":2,},
@@ -142,6 +144,7 @@
     {"folderPath":"folders/Objects/obj_interativeis/impressora.yy","order":10,"resourceVersion":"1.0","name":"impressora","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/objetos interativeis/maquinas.yy","order":6,"resourceVersion":"1.0","name":"maquinas","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/objetos interativeis/porta.yy","order":7,"resourceVersion":"1.0","name":"porta","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/placa.yy","order":16,"resourceVersion":"1.0","name":"placa","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

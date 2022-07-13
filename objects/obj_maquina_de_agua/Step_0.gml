@@ -14,20 +14,23 @@ if (!destruido)
 			criar_pop_up("+500",x,y-sprite_height/2);
 		}
 	}
-	if (golpeado.id!=ultimo_golpe)
-	{		
-		if (golpeado.x > x)
-		{
-			instance_create_depth(bbox_right,y,-300,obj_impacto);
-		}else{
-			instance_create_depth(bbox_left,y,-300,obj_impacto);
+	if (golpeado)
+	{
+		if (golpeado.id!=ultimo_golpe)
+		{		
+			if (golpeado.x > x)
+			{
+				instance_create_depth(bbox_right,y,-300,obj_impacto);
+			}else{
+				instance_create_depth(bbox_left,y,-300,obj_impacto);
+			}
+			audio_play_sound(snd_soco,1,false)
+			hp-=golpeado.dano;
+			alarm[2] = 30;
+			global.score+=golpeado.pontos;
+			criar_pop_up("+"+string(golpeado.pontos),x,y-sprite_height/2);
+			ultimo_golpe=golpeado.id;
 		}
-		audio_play_sound(snd_soco,1,false)
-		hp-=golpeado.dano;
-		alarm[2] = 30;
-		global.score+=golpeado.pontos;
-		criar_pop_up("+"+string(golpeado.pontos),x,y-sprite_height/2);
-		ultimo_golpe=golpeado.id;
 	}
 }
 

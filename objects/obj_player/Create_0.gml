@@ -15,7 +15,7 @@ subir = true;
 combo_fase = 0;
 tempo_padrao = 10;
 tempo_combo = tempo_padrao;
-energia = 12;
+energia = 3;
 
 // state machine
 estado = "parado";

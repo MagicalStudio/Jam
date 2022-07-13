@@ -10,7 +10,7 @@ if(global.score>10) // eu nao sei fazer melhor que isso kkk
 	score_desenhar="0000"+string(global.score);
 	if (global.score>100)
 	{
-		score_desenhar="000"+string(global.score);
+		score_desenhar="00"+string(global.score);
 		if (global.score>1000)
 		{
 			score_desenhar="00"+string(global.score);
@@ -23,14 +23,17 @@ if(global.score>10) // eu nao sei fazer melhor que isso kkk
 }
 draw_set_font(fnt_calibri);
 draw_set_color(c_black);
-draw_text(cam_x+18,13,string(score_desenhar)+" pontos");
-draw_text(cam_x+18,11,string(score_desenhar)+" pontos");
-draw_text(cam_x+19,12,string(score_desenhar)+" pontos");
-draw_text(cam_x+17,12,string(score_desenhar)+" pontos");
+draw_set_halign(fa_right)
+draw_set_valign(fa_top);
+draw_text(cam_x+width_cam-2,3,string(score_desenhar)+" pontos");
+draw_text(cam_x+width_cam-2,1,string(score_desenhar)+" pontos");
+draw_text(cam_x+width_cam-1,2,string(score_desenhar)+" pontos");
+draw_text(cam_x+width_cam-3,2,string(score_desenhar)+" pontos");
 draw_set_color(c_yellow);
-draw_text(cam_x+18,12,string(score_desenhar)+" pontos");
+draw_text(cam_x+width_cam-2,2,string(score_desenhar)+" pontos");
 draw_set_color(c_white);
-draw_set_font(fnt_calibri);
+draw_set_halign(-1)
+draw_set_valign(-1)
 //desenhando energia
 draw_sprite(spr_barras_de_energia,obj_player.energia,cam_x+1+sprite_get_width(spr_rosto_personagem),1+sprite_get_height(spr_barra_de_vida))
 

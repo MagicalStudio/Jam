@@ -141,7 +141,6 @@ switch(estado)
 		{
 			z_pos = lerp(z_pos,-15,.1);
 			x = lerp(x,x_,.1);
-			show_debug_message(string(x)+"\ndestiny : "+string(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])/2))
 			y = lerp(y,room_height-32-sprite_height/2,.1);
 		}else{
 			z_pos = lerp(z_pos,-15,.1);
