@@ -1,15 +1,16 @@
 {
+  "name": "obj_impressora",
   "spriteId": {
     "name": "spr_impressora",
     "path": "sprites/spr_impressora/spr_impressora.yy",
   },
-  "solid": false,
-  "visible": true,
-  "managed": true,
   "spriteMaskId": null,
+  "visible": true,
+  "solid": false,
   "persistent": false,
-  "parentObjectId": null,
   "physicsObject": false,
+  "managed": true,
+  "parentObjectId": null,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -36,7 +37,6 @@
     "path": "folders/Objects/obj_interativeis/impressora.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_impressora",
   "tags": [],
   "resourceType": "GMObject",
 }

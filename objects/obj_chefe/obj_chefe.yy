@@ -1,18 +1,19 @@
 {
+  "name": "obj_chefe",
   "spriteId": {
     "name": "spr_chefe",
     "path": "sprites/spr_chefe/spr_chefe.yy",
   },
-  "solid": false,
-  "visible": true,
-  "managed": true,
   "spriteMaskId": {
     "name": "spr_chefe_colisao",
     "path": "sprites/spr_chefe_colisao/spr_chefe_colisao.yy",
   },
+  "visible": true,
+  "solid": false,
   "persistent": false,
-  "parentObjectId": null,
   "physicsObject": false,
+  "managed": true,
+  "parentObjectId": null,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -41,7 +42,6 @@
     "path": "folders/Objects/chefe.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_chefe",
   "tags": [],
   "resourceType": "GMObject",
 }

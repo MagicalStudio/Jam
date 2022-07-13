@@ -7,6 +7,12 @@ spd  = 1;
 estado = "parado";
 ataque = "0";
 
+
+//saude
+hp_max = 8;
+hp = hp_max;
+quantidade_de_golpes_tomados = 0;
+
 //ataques
 
 //chifre

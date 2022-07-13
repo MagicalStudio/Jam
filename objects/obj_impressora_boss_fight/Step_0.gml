@@ -1,7 +1,7 @@
 var golpeado = instance_place(x,y,obj_player_golpe);
 var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
-if (z_pos <= 0)
+if (z_pos >= 0)
 {
 	z_pos = 0;
 	if (!destruido)
@@ -40,8 +40,8 @@ if (z_pos <= 0)
 }else{
 	if (cair = true)
 	{
-		z_pos -= 5;
-		z_pos = clamp(z_pos,0,2013);
+		z_pos += 5;
+		z_pos = clamp(z_pos,-2000,0);
 	}else{
 		x=obj_player.x
 		y=obj_player.y;
@@ -82,6 +82,12 @@ if (hp<=0) && (!destruido)
 		}
 	}
 	ds_list_destroy(list_);
+	
+	var ellipse_collision = collision_ellipse(x-60,y-10,x+60,y+10,obj_chefe,true,true);
+	if (ellipse_collision)
+	{
+		obj_chefe.estado = "fragilizado";
+	}
 }
 
 x+=velh;

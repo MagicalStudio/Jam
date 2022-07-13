@@ -1,5 +1,3 @@
-
-
 var golpeado = instance_place(x,y,obj_player_golpe);
 var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 

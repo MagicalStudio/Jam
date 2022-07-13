@@ -7,7 +7,7 @@ switch(estado)
 		velh = 0;
 		if (alarm[0]==-1)
 		{
-			alarm[0]=room_speed*2;
+			alarm[0]=room_speed*3;
 		}
 	break;
 	#endregion
@@ -108,4 +108,21 @@ switch(estado)
 		}
  	break;
 	#endregion
+	
+	#region fragilizado
+	case "fragilizado":
+		var colisao = collision_rectangle(bbox_left,bbox_top,bbox_right,y,obj_player_golpe,true,true);
+		if (colisao)
+		{
+			quantidade_de_golpes_tomados++;
+			hp-=colisao.dano;
+			if (quantidade_de_golpes_tomados==3) 
+			{
+				quantidade_de_golpes_tomados = 0;
+				estado = "parado";
+			}
+		}
+	break;
+	#endregion
+	
 }

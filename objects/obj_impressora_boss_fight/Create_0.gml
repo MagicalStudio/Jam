@@ -9,5 +9,5 @@ hp = 4;
 ultimo_golpe = noone;
 ultimo_golpe_inimigo = noone;
 
-z_pos = 200;
+z_pos = -400;
 cair = false;
