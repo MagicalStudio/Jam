@@ -1,12 +1,11 @@
 //movimentação
 velh = 0;
 velv = 0;
-spd  = .5;
+spd  = 1;
 
 //estados
 estado = "parado";
-ataque_escolhido = "pulo";
-comeco_atacar = false;
+ataque = "pulo";
 
 //ataques
 
@@ -14,8 +13,8 @@ comeco_atacar = false;
 direcao_correr = 0;
 
 //pulo
-seguindo = false;
 caindo = false;
+timer_cair = room_speed;
 
 //draw
 xscale = 1;

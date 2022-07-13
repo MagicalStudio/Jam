@@ -4,7 +4,7 @@
     "path": "sprites/spr_player_soco/spr_player_soco.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

@@ -7,14 +7,14 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 29,
-  "bbox_top": 2,
+  "bbox_left": 3,
+  "bbox_right": 38,
+  "bbox_top": 0,
   "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 30,
+  "width": 48,
   "height": 64,
   "textureGroupId": {
     "name": "Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4bfa8ee3-a7f2-401b-a23b-2fcb5a42479c","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4bfa8ee3-a7f2-401b-a23b-2fcb5a42479c","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"LayerId":{"name":"2f0166ff-004c-4314-843a-1cc1ea323edd","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_maquina_de_cafe","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"resourceVersion":"1.0","name":"4bfa8ee3-a7f2-401b-a23b-2fcb5a42479c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"600cf0f2-1387-4af6-8711-0c2b2e192730","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"600cf0f2-1387-4af6-8711-0c2b2e192730","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"LayerId":{"name":"abfd428a-4169-4d73-9fb8-c9e2e86a0710","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_maquina_de_cafe","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"resourceVersion":"1.0","name":"600cf0f2-1387-4af6-8711-0c2b2e192730","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_maquina_de_cafe","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d1fe9f2f-20c5-4487-afbc-a773f1cf93d3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4bfa8ee3-a7f2-401b-a23b-2fcb5a42479c","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c275095a-8cfc-4b72-96bf-e69f09d4aaa0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"600cf0f2-1387-4af6-8711-0c2b2e192730","path":"sprites/spr_maquina_de_cafe/spr_maquina_de_cafe.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,7 +54,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 15,
+    "xorigin": 24,
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2f0166ff-004c-4314-843a-1cc1ea323edd","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"abfd428a-4169-4d73-9fb8-c9e2e86a0710","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

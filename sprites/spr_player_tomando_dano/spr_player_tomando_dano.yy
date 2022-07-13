@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 26,
+  "bbox_right": 19,
   "bbox_top": 0,
   "bbox_bottom": 35,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 27,
+  "width": 20,
   "height": 36,
   "textureGroupId": {
     "name": "Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bdf9faf3-c4aa-4aba-980c-b781ca1df993","path":"sprites/spr_player_socando/spr_player_socando.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bdf9faf3-c4aa-4aba-980c-b781ca1df993","path":"sprites/spr_player_socando/spr_player_socando.yy",},"LayerId":{"name":"51b009f3-49be-4738-a792-e2221dfe5ca9","path":"sprites/spr_player_socando/spr_player_socando.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_socando","path":"sprites/spr_player_socando/spr_player_socando.yy",},"resourceVersion":"1.0","name":"bdf9faf3-c4aa-4aba-980c-b781ca1df993","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3dbd5d7b-73c3-408d-9749-94581502c6c5","path":"sprites/spr_player_tomando_dano/spr_player_tomando_dano.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3dbd5d7b-73c3-408d-9749-94581502c6c5","path":"sprites/spr_player_tomando_dano/spr_player_tomando_dano.yy",},"LayerId":{"name":"65e71247-b8bb-483e-8f39-56d000fd5079","path":"sprites/spr_player_tomando_dano/spr_player_tomando_dano.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_tomando_dano","path":"sprites/spr_player_tomando_dano/spr_player_tomando_dano.yy",},"resourceVersion":"1.0","name":"3dbd5d7b-73c3-408d-9749-94581502c6c5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_player_socando","path":"sprites/spr_player_socando/spr_player_socando.yy",},
+    "spriteId": {"name":"spr_player_tomando_dano","path":"sprites/spr_player_tomando_dano/spr_player_tomando_dano.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"aa9cd5a6-c226-4e30-8e0a-5bbd0db4a726","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bdf9faf3-c4aa-4aba-980c-b781ca1df993","path":"sprites/spr_player_socando/spr_player_socando.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"05cf9064-eb9a-44b7-87cc-db0653373c18","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3dbd5d7b-73c3-408d-9749-94581502c6c5","path":"sprites/spr_player_tomando_dano/spr_player_tomando_dano.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,18 +54,18 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 13,
+    "xorigin": 10,
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_player_socando","path":"sprites/spr_player_socando/spr_player_socando.yy",},
+    "parent": {"name":"spr_player_tomando_dano","path":"sprites/spr_player_tomando_dano/spr_player_tomando_dano.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_player_socando",
+    "name": "spr_player_tomando_dano",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"51b009f3-49be-4738-a792-e2221dfe5ca9","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"65e71247-b8bb-483e-8f39-56d000fd5079","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/player/golpes.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_player_socando",
+  "name": "spr_player_tomando_dano",
   "tags": [],
   "resourceType": "GMSprite",
 }

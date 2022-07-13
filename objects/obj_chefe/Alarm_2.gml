@@ -1,2 +1,2 @@
-///@desc tempo para parar de seguir
-seguindo = false;
+///@desc cair
+caindo = true;

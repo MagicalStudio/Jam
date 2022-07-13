@@ -60,16 +60,19 @@ switch(estado)
 				{
 					instance_create_depth(x,y,depth,obj_player_gancho,{image_xscale : xscale, dano : 2, pontos : 200})
 					combo_fase = 0; // volto pro soco
+					sprite_index = spr_player_gancho;
 					alarm[0] = tempo_ataque*2
 				}else if (combo_fase == 1) // chute
 				{
 					instance_create_depth(x,y,depth,obj_player_chute,{image_xscale : xscale, dano : 1, pontos : 100})
 					combo_fase=2; // vou pro gancho
 					alarm[0] = tempo_ataque;
+					sprite_index = spr_player_chutando;
 				}else if (combo_fase == 0) //soco
 				{
 					instance_create_depth(x,y,depth,obj_player_soco,{image_xscale : xscale, dano : 1, pontos : 50})
 					combo_fase=1; // vou pro chute
+					sprite_index = spr_player_socando
 					alarm[0] = tempo_ataque
 				}
 			}
@@ -86,13 +89,14 @@ switch(estado)
 		{
 			alarm[2] = 10;
 		}
+		sprite_index = spr_player_tomando_dano;
 	break;
 	#endregion
 	
 	#region knockback
 	
 	case "knockback":
-	
+		sprite_index = spr_player_tomando_dano;
 		z_pos+=z_pos_add;
 		if (z_pos>-16) && (subir)
 		{ 
@@ -122,6 +126,7 @@ switch(estado)
 		velv = 0;
 		velh = 0;
 		if (alarm[3]==-1) alarm[3] = room_speed;
+		sprite_index = spr_player_tomando_dano;
 	break;
 	#endregion
 	
@@ -131,6 +136,7 @@ switch(estado)
 		//velv=-1;
 		image_angle = lerp(image_angle,0,.1);
 		if (round(image_angle)==0) estado = "parado";
+		sprite_index = spr_player_tomando_dano;
 	break;
 	#endregion
 	
