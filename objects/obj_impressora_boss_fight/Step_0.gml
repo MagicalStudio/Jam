@@ -41,10 +41,18 @@ if (z_pos >= 0)
 	if (cair = true)
 	{
 		z_pos += 5;
+		if (z_pos + 5 >= 0)
+		{
+			if (collision_rectangle(bbox_left,y-15,bbox_right,y-7,obj_player,true,true))
+			{
+				obj_player.estado = "knockback";
+				obj_player.xscale = sign(x-obj_player.x);
+			}
+		}
 		z_pos = clamp(z_pos,-2000,0);
 	}else{
 		x=obj_player.x
-		y=obj_player.y;
+		y=obj_player.y-5;
 	}
 }
 

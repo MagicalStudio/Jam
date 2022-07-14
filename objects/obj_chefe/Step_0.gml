@@ -45,8 +45,7 @@ if (!global.especial_ativo)
 	
 		#region atacar
 		case "atacar":
-			if (obj_player.x > x) xscale  = 1;
-			else xscale = -1;
+		
 			switch(ataque)
 			{
 				#region chifre
@@ -61,6 +60,7 @@ if (!global.especial_ativo)
 						if (depth>player.depth) && (player.estado!="knockback") && (player.estado!="caido") && (player.estado!="levantando")
 						{
 							player.estado = "knockback";
+							player.xscale = xscale;
 						}
 					}
 				
@@ -78,6 +78,8 @@ if (!global.especial_ativo)
 			
 				#region pulo				
 				case "pulo":
+					if (obj_player.x > x) xscale  = 1;
+					else xscale = -1;
 					if (point_distance(x,y,obj_player.x,obj_player.y-5) > 3) && (!caindo)
 					{
 						var dir = point_direction(x,y,obj_player.x,obj_player.y-5);
@@ -106,6 +108,7 @@ if (!global.especial_ativo)
 									if  (obj_player.depth < depth) && (obj_player.estado!="knockback") && (obj_player.estado!="caido") && (obj_player.estado!="levantando")
 									{
 										obj_player.estado = "knockback";
+										obj_player.xscale = xscale;
 									}  
 								}
 							
@@ -127,10 +130,12 @@ if (!global.especial_ativo)
 			
 				#region impressora
 				case "impressora":
+					if (obj_player.x > x) xscale  = 1;
+					else xscale = -1;
 					if (!instance_exists(obj_impressora_boss_fight))
 					{
 						instance_create_depth(-100,-100,depth,obj_impressora_boss_fight);
-						alarm[3] = room_speed * 4;
+						alarm[3] = room_speed * 3;
 					}
 				break;
 				#endregion
