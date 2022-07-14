@@ -1,16 +1,15 @@
 {
-  "name": "obj_impressora_boss_fight",
   "spriteId": {
     "name": "spr_impressora",
     "path": "sprites/spr_impressora/spr_impressora.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": null,
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -37,6 +36,7 @@
     "path": "folders/Objects/obj_interativeis/impressora.yy",
   },
   "resourceVersion": "1.0",
+  "name": "obj_impressora_boss_fight",
   "tags": [],
   "resourceType": "GMObject",
 }

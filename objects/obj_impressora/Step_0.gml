@@ -64,6 +64,18 @@ if (hp<=0) && (!destruido)
 	{
 		for (var i = 0; i < ellipse_collision; i++)
 		{
+			if (list_[| i].escolhido_para_atacar==true)
+			{
+				if (list_[| i].object_index==obj_inimigo_01)
+				{
+					obj_controle_dos_inimigos.inimigos01_array = false;
+				}
+				
+				if (list_[| i].object_index==obj_inimigo_02)
+				{
+					obj_controle_dos_inimigos.inimigos02_array = false;
+				}
+			}
 			instance_destroy(list_[| i],false);
 			instance_create_depth(list_[| i].x,list_[| i].y,depth,obj_inimigo_voando_carbonizado,{image_xscale : sign(x-list_[| i].x), sprite_index : list_[| i].sprite_index });
 		}
