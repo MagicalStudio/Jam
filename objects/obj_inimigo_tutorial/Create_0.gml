@@ -6,6 +6,7 @@ velh = 0;
 velv = 0;
 
 xscale = 1;
+escolhido_para_atacar = false;
 
 //skin
 skin = 1+irandom(1);

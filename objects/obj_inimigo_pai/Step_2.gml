@@ -18,13 +18,17 @@ if (caixa_de_colisao) && (estado!="caido") && (estado!="levantando") && (estado!
 		}
 		hp -= caixa_de_colisao.dano;
 		ultimo_soco=caixa_de_colisao.id;
-		audio_play_sound(snd_soco,1,false);
 		
+		if (!audio_is_playing(snd_soco))
+		{
+			audio_play_sound(snd_soco,1,false);
+		}
+			
 		if (caixa_de_colisao.object_index == obj_player_gancho)
 		{
 			estado = "knockback";
 			obj_player.energia+=1;
-			if (obj_player.energia >= 6) obj_player.energia = 6;
+			if (obj_player.energia >=3) obj_player.energia = 3;
 		}else{
 			estado = "recebendo_dano";
 		}

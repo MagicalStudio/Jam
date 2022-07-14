@@ -110,7 +110,7 @@ if (!global.especial_ativo)
 	
 			if (alarm[1]==-1)
 			{
-				alarm[1] = 30;
+				alarm[1] = 15;
 			}
 	
 		break;

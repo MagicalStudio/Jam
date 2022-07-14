@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_soco.mp3",
-  "duration": 1.17551,
+  "duration": 0.339592,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

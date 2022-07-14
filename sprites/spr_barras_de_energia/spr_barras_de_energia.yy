@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 29,
+  "bbox_right": 14,
   "bbox_top": 0,
   "bbox_bottom": 5,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 30,
+  "width": 15,
   "height": 6,
   "textureGroupId": {
     "name": "Default",
@@ -27,15 +27,6 @@
     {"compositeImage":{"FrameId":{"name":"30a28e74-092d-4b84-861d-c36d844e2a66","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"30a28e74-092d-4b84-861d-c36d844e2a66","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":{"name":"737e24f2-5748-42d9-ba80-75e017d3d0ba","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_barras_de_energia","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"30a28e74-092d-4b84-861d-c36d844e2a66","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ba562421-1084-4c45-b682-f11b0d9ef501","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ba562421-1084-4c45-b682-f11b0d9ef501","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":{"name":"737e24f2-5748-42d9-ba80-75e017d3d0ba","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_barras_de_energia","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"ba562421-1084-4c45-b682-f11b0d9ef501","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f6b061c3-6996-4140-a87a-c92908392236","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f6b061c3-6996-4140-a87a-c92908392236","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":{"name":"737e24f2-5748-42d9-ba80-75e017d3d0ba","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_barras_de_energia","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"f6b061c3-6996-4140-a87a-c92908392236","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ca1bd1cc-85ff-4b8f-ab08-507dd674d980","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ca1bd1cc-85ff-4b8f-ab08-507dd674d980","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":{"name":"737e24f2-5748-42d9-ba80-75e017d3d0ba","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_barras_de_energia","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"ca1bd1cc-85ff-4b8f-ab08-507dd674d980","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"9751f65f-bb6d-4596-a64b-c70022d04a40","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"9751f65f-bb6d-4596-a64b-c70022d04a40","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"LayerId":{"name":"737e24f2-5748-42d9-ba80-75e017d3d0ba","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_barras_de_energia","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","name":"9751f65f-bb6d-4596-a64b-c70022d04a40","tags":[],"resourceType":"GMSpriteFrame",},
@@ -54,18 +45,15 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 7.0,
+    "length": 4.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b5e51220-b40e-49e4-bdcc-a1b91504c83d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30a28e74-092d-4b84-861d-c36d844e2a66","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"fac85de5-87c6-4151-84bf-599f80352bdc","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ba562421-1084-4c45-b682-f11b0d9ef501","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"0df2da5c-b3cd-4e83-814b-1e89fb80406c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f6b061c3-6996-4140-a87a-c92908392236","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"4aaceb0b-c474-42dc-ad38-ed42d8a0e523","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca1bd1cc-85ff-4b8f-ab08-507dd674d980","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"c1376902-2f84-487c-a767-718be4fc9cf2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9751f65f-bb6d-4596-a64b-c70022d04a40","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"6b802cbe-53d5-4978-b5a2-9a812c24fc5a","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e81e4d1d-333d-4cc5-bb99-295d5451f8ae","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"4eadf5d8-0997-4179-9e83-496315ed5ee1","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bdf34ebc-b92a-4621-8b05-8a057df7315e","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c1376902-2f84-487c-a767-718be4fc9cf2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9751f65f-bb6d-4596-a64b-c70022d04a40","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6b802cbe-53d5-4978-b5a2-9a812c24fc5a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e81e4d1d-333d-4cc5-bb99-295d5451f8ae","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4eadf5d8-0997-4179-9e83-496315ed5ee1","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bdf34ebc-b92a-4621-8b05-8a057df7315e","path":"sprites/spr_barras_de_energia/spr_barras_de_energia.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

@@ -27,7 +27,12 @@ if (!destruido)
 			}else{
 				instance_create_depth(bbox_left,y,-300,obj_impacto);
 			}
-			audio_play_sound(snd_soco,1,false)
+			
+			if (!audio_is_playing(snd_soco))
+			{
+				audio_play_sound(snd_soco,1,false);
+			}
+			
 			hp-=golpeado.dano;
 			alarm[2] = 30;
 			global.score+=golpeado.pontos;

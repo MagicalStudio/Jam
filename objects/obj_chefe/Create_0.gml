@@ -9,11 +9,12 @@ ataque = "0";
 
 
 //saude
-hp_max = 8;
+hp_max = 32;
 hp = hp_max;
 quantidade_de_golpes_tomados = 0;
 
 //ataques
+dano = 3;
 
 //chifre
 direcao_correr = 0;

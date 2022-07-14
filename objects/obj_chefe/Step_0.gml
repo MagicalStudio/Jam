@@ -8,6 +8,8 @@ if (!global.especial_ativo)
 			velv = 0;
 			velh = 0;
 			
+			z_pos = lerp(z_pos,0,.1);
+			
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 		
@@ -20,6 +22,7 @@ if (!global.especial_ativo)
 	
 		#region atacando
 		case "atacando":
+			z_pos = lerp(z_pos,0,.1);
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 			if (alarm[1] == -1)
@@ -45,11 +48,11 @@ if (!global.especial_ativo)
 	
 		#region atacar
 		case "atacar":
-		
 			switch(ataque)
 			{
 				#region chifre
 				case "chifre":
+					z_pos = lerp(z_pos,0,.1);
 					var vel_ = 2;
 					velh = lengthdir_x(spd*vel_,direcao_correr);
 					velv = lengthdir_y(spd*vel_,direcao_correr);
@@ -61,6 +64,7 @@ if (!global.especial_ativo)
 						{
 							player.estado = "knockback";
 							player.xscale = xscale;
+							player.hp -= dano;
 						}
 					}
 				
@@ -109,6 +113,7 @@ if (!global.especial_ativo)
 									{
 										obj_player.estado = "knockback";
 										obj_player.xscale = xscale;
+										obj_player.hp -= 3;
 									}  
 								}
 							
@@ -129,7 +134,9 @@ if (!global.especial_ativo)
 				#endregion
 			
 				#region impressora
+				
 				case "impressora":
+					z_pos = lerp(z_pos,0,.1);
 					if (obj_player.x > x) xscale  = 1;
 					else xscale = -1;
 					if (!instance_exists(obj_impressora_boss_fight))
@@ -145,11 +152,19 @@ if (!global.especial_ativo)
 	
 		#region fragilizado
 		case "fragilizado":
+			z_pos = lerp(z_pos,0,.1);
 			velv = 0;
 			velh = 0;
 			var colisao = collision_rectangle(bbox_left,bbox_top,bbox_right,y,obj_player_golpe,true,true);
 			if (colisao)
 			{
+				if (!audio_is_playing(snd_soco))
+				{
+					audio_play_sound(snd_soco,1,false);
+				}
+	
+				instance_create_depth(x,y,depth,obj_impacto);
+				
 				quantidade_de_golpes_tomados++;
 				hp-=colisao.dano;
 				if (quantidade_de_golpes_tomados==3) 
