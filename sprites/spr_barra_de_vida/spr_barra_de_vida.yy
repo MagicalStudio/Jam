@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "hud",
-    "path": "folders/Sprites/hud.yy",
+    "name": "player",
+    "path": "folders/Sprites/hud/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_barra_de_vida",

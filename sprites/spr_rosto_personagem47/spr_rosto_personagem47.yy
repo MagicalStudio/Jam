@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a610debb-556e-4ab1-b760-040922ff5575","path":"sprites/spr_rosto_personagem/spr_rosto_personagem.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a610debb-556e-4ab1-b760-040922ff5575","path":"sprites/spr_rosto_personagem/spr_rosto_personagem.yy",},"LayerId":{"name":"737e24f2-5748-42d9-ba80-75e017d3d0ba","path":"sprites/spr_rosto_personagem/spr_rosto_personagem.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rosto_personagem","path":"sprites/spr_rosto_personagem/spr_rosto_personagem.yy",},"resourceVersion":"1.0","name":"a610debb-556e-4ab1-b760-040922ff5575","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a610debb-556e-4ab1-b760-040922ff5575","path":"sprites/spr_rosto_personagem47/spr_rosto_personagem47.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a610debb-556e-4ab1-b760-040922ff5575","path":"sprites/spr_rosto_personagem47/spr_rosto_personagem47.yy",},"LayerId":{"name":"737e24f2-5748-42d9-ba80-75e017d3d0ba","path":"sprites/spr_rosto_personagem47/spr_rosto_personagem47.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_rosto_personagem47","path":"sprites/spr_rosto_personagem47/spr_rosto_personagem47.yy",},"resourceVersion":"1.0","name":"a610debb-556e-4ab1-b760-040922ff5575","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_rosto_personagem","path":"sprites/spr_rosto_personagem/spr_rosto_personagem.yy",},
+    "spriteId": {"name":"spr_rosto_personagem47","path":"sprites/spr_rosto_personagem47/spr_rosto_personagem47.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c1d17680-3576-4a26-99e5-513f2fe0b809","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a610debb-556e-4ab1-b760-040922ff5575","path":"sprites/spr_rosto_personagem/spr_rosto_personagem.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dd78db2d-777f-4d68-8e06-ca961c684e78","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a610debb-556e-4ab1-b760-040922ff5575","path":"sprites/spr_rosto_personagem47/spr_rosto_personagem47.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,7 +58,7 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_rosto_personagem","path":"sprites/spr_rosto_personagem/spr_rosto_personagem.yy",},
+    "parent": {"name":"spr_rosto_personagem47","path":"sprites/spr_rosto_personagem47/spr_rosto_personagem47.yy",},
     "resourceVersion": "1.4",
     "name": "spr_rosto_personagem",
     "tags": [],
@@ -69,11 +69,11 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "player",
-    "path": "folders/Sprites/hud/player.yy",
+    "name": "boss",
+    "path": "folders/Sprites/hud/boss.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_rosto_personagem",
+  "name": "spr_rosto_personagem47",
   "tags": [],
   "resourceType": "GMSprite",
 }
