@@ -2,8 +2,8 @@ if (room == rm_sala_do_boss)
 {
 	if (status=[0,0])
 	{
-		status[0] = player.hp;
-		status[1] = player.energia;
+		status[0] = obj_player.hp;
+		status[1] = obj_player.energia;
 	}
 
 }

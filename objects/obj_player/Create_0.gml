@@ -21,5 +21,5 @@ energia = 0;
 estado = "parado";
 
 //saude
-hp_max = 10;
+hp_max = 1;
 hp = hp_max;

@@ -2,6 +2,11 @@ draw_set_font(fnt_calibri)
 draw_set_halign(fa_center);
 if (room == rm_menu)
 {
+	if (surf!=-1)
+	{
+		surface_free(surf);
+		surf = -1;
+	}
 	draw_text(room_width/2,100,"ESPAÇO para iniciar");
 	draw_text(room_width/2,85,"ESC Créditos");
 	draw_text(room_width/2,115,"F11 Tela Cheia");

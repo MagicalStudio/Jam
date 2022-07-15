@@ -89,9 +89,15 @@ switch(estado)
 		z_pos = lerp(z_pos,0,.1);
 		combo_fase = 0;
 		tempo_combo=tempo_padrao;
-		if (alarm[2] == -1) 
+		
+		if (hp<=0)
 		{
-			alarm[2] = 10;
+			estado = "knockback";
+		}else{
+			if (alarm[2] == -1) 
+			{
+				alarm[2] = 20;
+			}
 		}
 		sprite_index = spr_player_tomando_dano;
 	break;
@@ -111,7 +117,12 @@ switch(estado)
 			if (z_pos>=0)
 			{
 				subir = true;
-				estado = "caido";
+				if (hp>0)
+				{
+					estado = "caido";
+				}else{
+					estado = "morto";
+				}
 				z_pos = 0;
 				z_pos_add = -2;
 			}
@@ -190,9 +201,18 @@ switch(estado)
 		}
 	break;
 	#endregion
+	
+	#region morto
+		case "morto":
+		depth=-200;
+		instance_destroy(obj_hud);
+		instance_create_depth(x,y,-100,obj_morte);
+		break;
+	#endregion
 }
 
-if (velh!=0) && (estado!="knockback") && (estado!="caido") && (estado!="levantando")
+show_debug_message(estado)
+if (velh!=0) && (estado!="knockback") && (estado!="caido") && (estado!="levantando") && (estado!="morto")
 {
 	xscale = sign(velh);
 }
