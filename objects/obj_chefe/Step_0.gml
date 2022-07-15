@@ -177,6 +177,7 @@ if (!global.especial_ativo)
 		#endregion	
 	}
 }else{
+	
 	z_pos = lerp(z_pos,0,.1);
 	if (alarm[5] == -1) && (instance_exists(obj_prancheta))
 	{
@@ -190,4 +191,5 @@ if (!global.especial_ativo)
 	//pulo
 	caindo = false;
 	timer_cair = room_speed;
+	
 }

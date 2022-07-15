@@ -106,3 +106,10 @@ function inimigos_02_na_view(){
 	return inimigos;
 	
 }
+
+///@func transicao()
+///@arg proximaRoom
+function transicao()
+{
+	instance_create_depth(0,0,-3000,obj_transicao,{proxima_room : argument0});
+}

@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 29,
-  "bbox_top": 2,
-  "bbox_bottom": 63,
+  "bbox_left": 2,
+  "bbox_right": 40,
+  "bbox_top": 7,
+  "bbox_bottom": 79,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 30,
-  "height": 64,
+  "width": 48,
+  "height": 80,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4bfa8ee3-a7f2-401b-a23b-2fcb5a42479c","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4bfa8ee3-a7f2-401b-a23b-2fcb5a42479c","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"LayerId":{"name":"2f0166ff-004c-4314-843a-1cc1ea323edd","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_maquina_de_agua","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"resourceVersion":"1.0","name":"4bfa8ee3-a7f2-401b-a23b-2fcb5a42479c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1c9d82fb-05ca-444c-a007-ae24281a67fd","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1c9d82fb-05ca-444c-a007-ae24281a67fd","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"LayerId":{"name":"530e599a-a4e5-4dc6-9d52-ba7f40a45a58","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_maquina_de_agua","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"resourceVersion":"1.0","name":"1c9d82fb-05ca-444c-a007-ae24281a67fd","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_maquina_de_agua","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7c02f907-ed70-406a-8731-09e09c5e8ccd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4bfa8ee3-a7f2-401b-a23b-2fcb5a42479c","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b0859a9a-e26c-48bc-9928-c6525a102c19","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1c9d82fb-05ca-444c-a007-ae24281a67fd","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 15,
-    "yorigin": 32,
+    "xorigin": 24,
+    "yorigin": 40,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_maquina_de_agua","path":"sprites/spr_maquina_de_agua/spr_maquina_de_agua.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2f0166ff-004c-4314-843a-1cc1ea323edd","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"530e599a-a4e5-4dc6-9d52-ba7f40a45a58","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

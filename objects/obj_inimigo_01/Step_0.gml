@@ -33,7 +33,7 @@ if (!global.especial_ativo)
 		case "andando":
 			z_pos = lerp(z_pos,0,.1);
 			image_angle = lerp(image_angle,0,.1);
-			sprite_index = asset_get_index("spr_inimigo_01_parado_"+string(skin))
+			sprite_index = asset_get_index("spr_inimigo_01_andando_"+string(skin))
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
@@ -60,6 +60,7 @@ if (!global.especial_ativo)
 		case "atacando":
 			z_pos = lerp(z_pos,0,.1);
 			image_angle = lerp(image_angle,0,.1);
+			if (!escolhido_para_atacar) sprite_index = asset_get_index("spr_inimigo_01_armando_"+string(skin))
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 	
@@ -83,10 +84,12 @@ if (!global.especial_ativo)
 					{
 						if (distance_to_object(obj_player) > 10)
 						{
+							sprite_index = asset_get_index("spr_inimigo_01_andando_"+string(skin))
 							direcao_andar = point_direction(x,y,obj_player.x,obj_player.y);
 							velh = lengthdir_x(vel,direcao_andar);
 							velv = lengthdir_y(vel,direcao_andar);			
 						}else{
+							sprite_index = asset_get_index("spr_inimigo_01_armando_"+string(skin))
 							if (y != clamp(y,obj_player.y-3,obj_player.y+3))
 							{
 								var y_add = sign(obj_player.y-y);
@@ -151,7 +154,7 @@ if (!global.especial_ativo)
 				estado = "andando";
 			}
 			
-			sprite_index = asset_get_index("spr_inimigo_01_parado_"+string(skin))
+			sprite_index = asset_get_index("spr_inimigo_01_andando_"+string(skin))
 		
 		break;
 		#endregion

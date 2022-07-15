@@ -4,6 +4,6 @@ if (colisao_player)
 {
 	if (keyboard_check_released(ord("C")))
 	{
-		room_goto(rm_sala_do_boss);
+		transicao(rm_sala_do_boss);
 	}
 }

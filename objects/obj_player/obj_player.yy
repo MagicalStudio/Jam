@@ -1,19 +1,18 @@
 {
-  "name": "obj_player",
   "spriteId": {
     "name": "spr_player_parado",
     "path": "sprites/spr_player_parado/spr_player_parado.yy",
   },
+  "solid": false,
+  "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_player_colisao",
     "path": "sprites/spr_player_colisao/spr_player_colisao.yy",
   },
-  "visible": true,
-  "solid": false,
   "persistent": true,
-  "physicsObject": false,
-  "managed": true,
   "parentObjectId": null,
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -43,6 +42,7 @@
     "path": "folders/Objects/player.yy",
   },
   "resourceVersion": "1.0",
+  "name": "obj_player",
   "tags": [],
   "resourceType": "GMObject",
 }
