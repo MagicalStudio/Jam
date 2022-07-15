@@ -113,3 +113,9 @@ function transicao()
 {
 	instance_create_depth(0,0,-3000,obj_transicao,{proxima_room : argument0});
 }
+
+///@func reiniciar()
+function reiniciar()
+{
+	instance_create_depth(0,0,-3000,obj_reiniciar);
+}

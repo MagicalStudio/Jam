@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"obj_player_chute","path":"objects/obj_player_chute/obj_player_chute.yy",},"order":2,},
+    {"id":{"name":"obj_reiniciar","path":"objects/obj_reiniciar/obj_reiniciar.yy",},"order":8,},
     {"id":{"name":"obj_controle_vida_e_energia","path":"objects/obj_controle_vida_e_energia/obj_controle_vida_e_energia.yy",},"order":7,},
     {"id":{"name":"obj_impressora_boss_fight","path":"objects/obj_impressora_boss_fight/obj_impressora_boss_fight.yy",},"order":3,},
     {"id":{"name":"obj_quadro","path":"objects/obj_quadro/obj_quadro.yy",},"order":3,},
