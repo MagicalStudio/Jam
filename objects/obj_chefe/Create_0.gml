@@ -6,7 +6,7 @@ spd  = 1;
 //estados
 estado = "parado";
 ataque = "0";
-
+subir = true;
 
 //saude
 hp_max = 32;

@@ -23,7 +23,7 @@ if (!global.especial_ativo)
 		
 			if (instance_inside_view_camera(view_camera[0])) or (!pode_usar_clamp) && (y > room_height+sprite_height/2)
 			{
-				if (alarm[0]==-1) alarm[0] = room_speed;
+				if (alarm[0]==-1) alarm[0] = room_speed/2;
 			}
 	
 		break;

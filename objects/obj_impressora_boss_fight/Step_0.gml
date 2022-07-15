@@ -44,13 +44,14 @@ if (z_pos >= 0)
 	if (cair = true)
 	{
 		z_pos += 5;
-		if (z_pos + 5 >= 0)
+		if (z_pos + 5 >= 0) && (!ja_ataquei)
 		{
 			if (collision_rectangle(bbox_left,y-15,bbox_right,y-7,obj_player,true,true))
 			{
+				ja_ataquei = true;
 				obj_player.estado = "knockback";
 				obj_player.xscale = sign(x-obj_player.x);
-				obj_player.hp -= obj_chefe.hp;
+				obj_player.hp -= obj_chefe.dano;
 			}
 		}
 		z_pos = clamp(z_pos,-2000,0);

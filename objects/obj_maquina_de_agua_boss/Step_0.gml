@@ -66,4 +66,5 @@ if (destruido)
 		x=xstart+40*sign(velh);
 	}
 }
+
 //if (x-sprite_width*2 < global.min_x) instance_destroy(id,false);

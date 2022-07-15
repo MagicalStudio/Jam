@@ -4,6 +4,7 @@ if (!global.especial_ativo)
 	{
 		#region parado
 		case "parado":
+			image_angle = lerp(image_angle,0,.1);
 			caindo = false;
 			velv = 0;
 			velh = 0;
@@ -22,6 +23,7 @@ if (!global.especial_ativo)
 	
 		#region atacando
 		case "atacando":
+			image_angle = lerp(image_angle,0,.1);
 			z_pos = lerp(z_pos,0,.1);
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
@@ -48,6 +50,7 @@ if (!global.especial_ativo)
 	
 		#region atacar
 		case "atacar":
+			image_angle = lerp(image_angle,0,.1);
 			switch(ataque)
 			{
 				#region chifre
@@ -152,6 +155,7 @@ if (!global.especial_ativo)
 	
 		#region fragilizado
 		case "fragilizado":
+			image_angle = lerp(image_angle,0,.1);
 			z_pos = lerp(z_pos,0,.1);
 			velv = 0;
 			velh = 0;
@@ -162,7 +166,7 @@ if (!global.especial_ativo)
 				{
 					audio_play_sound(snd_soco,1,false);
 				}
-	
+				
 				instance_create_depth(x,y,depth,obj_impacto);
 				
 				quantidade_de_golpes_tomados++;
@@ -170,11 +174,58 @@ if (!global.especial_ativo)
 				if (quantidade_de_golpes_tomados==3) 
 				{
 					quantidade_de_golpes_tomados = 0;
-					estado = "parado";
+					if (colisao.object_index == obj_player_gancho)
+					{
+						estado = "knockback";
+						xscale = sign(obj_player.x-x);
+					}else{
+						estado = "parado";
+					}
 				}
 			}
 		break;
 		#endregion	
+		
+		#region knockback
+		case "knockback":
+//		sprite_index = asset_get_index("spr_inimigo_01_apanhando_"+string(skin))
+			z_pos+=z_pos_add;
+			if (z_pos>-16) && (subir)
+			{
+				z_pos_add-=.25;
+			}else{
+				subir = false;
+				z_pos_add+=.25;
+				if (z_pos>=0)
+				{
+					subir = true;
+					estado = "caido";
+					z_pos = 0;
+					z_pos_add = -2;
+				}
+			}
+			image_angle+=2.2 * xscale;
+			velh = xscale*2*-1;
+			velv = 0;
+
+		break;
+		#endregion
+		
+		#region caido
+	//	sprite_index = asset_get_index("spr_inimigo_01_apanhando_"+string(skin))
+		case "caido":
+			velv = 0;
+			velh = 0;
+			if (alarm[4]==-1) alarm[4] = room_speed;
+		break;
+		#endregion
+	
+		#region levantando
+		case "levantando":
+			image_angle = lerp(image_angle,0,.1);
+			if (round(image_angle)==0) estado = "parado";
+		break;
+		#endregion
 	}
 }else{
 	
