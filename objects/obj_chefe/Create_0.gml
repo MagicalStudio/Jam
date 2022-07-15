@@ -4,7 +4,8 @@ velv = 0;
 spd  = 1;
 
 //estados
-estado = "parado";
+estado = "dialogo";
+conversei = false;
 ataque = "0";
 subir = true;
 

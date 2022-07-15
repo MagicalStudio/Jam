@@ -1,4 +1,4 @@
-quantidade_inimigos = irandom_range(1,3);
+quantidade_inimigos = irandom_range(1,2);
 possiveis_inimigos = irandom_range(1,3);
 repeat(quantidade_inimigos)
 {

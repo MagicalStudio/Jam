@@ -106,7 +106,7 @@ function inimigos_02_na_view(){
 	return inimigos;
 	
 }
-
+ 
 ///@func transicao()
 ///@arg proximaRoom
 function transicao()

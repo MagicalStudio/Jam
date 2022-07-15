@@ -2,16 +2,6 @@
 if (!global.especial_ativo)
 {
 	
-	if (estado == "atacar") && (ataque == "chifre") && (place_meeting(x+velh,y,obj_chefe_parar_de_correr))
-	{
-		estado = "parado";
-	}
-	
-	if (estado == "atacar") && (ataque == "chifre") && (place_meeting(x,y+velv,obj_chefe_parar_de_correr))
-	{
-		estado = "parado";
-	}
-	
 	if (estado!="knockback")
 	{
 		if (place_meeting(x+velh,y,obj_colisao))
@@ -45,6 +35,17 @@ if (!global.especial_ativo)
 			y=lerp(y,room_height/2,.1);
 		}
 	}
+	
+	if (estado == "atacar") && (ataque == "chifre") && (place_meeting(x+velh,y,obj_chefe_parar_de_correr))
+	{
+		estado = "parado";
+	}
+	
+	if (estado == "atacar") && (ataque == "chifre") && (place_meeting(x,y+velv,obj_chefe_parar_de_correr))
+	{
+		estado = "parado";
+	}
+	
 }
 
 depth=-bbox_bottom;

@@ -2,6 +2,45 @@ if (!global.especial_ativo)
 {
 	switch(estado)
 	{
+		
+		#region dialogo
+		case "dialogo":
+			if (obj_player.x > x) xscale  = 1;
+			else xscale = -1;
+			
+			if (audio_is_playing(msc_corredor))
+			{
+				if (audio_sound_get_gain(msc_corredor) == 0)
+				{
+					audio_stop_sound(msc_corredor);
+					audio_play_sound(dia_chefe,1,0);
+					conversei = true;
+				}
+			}
+			
+			if (conversei) && (!audio_is_playing(dia_chefe))
+			{
+				if (instance_exists(obj_esposa)) obj_esposa.morrer = true;
+			}
+			
+		break;
+		#endregion
+		
+		#region engolindo
+			case "engolindo":
+			if (alarm[7]==-1)
+			{
+				alarm[7]=room_speed*3;
+			}
+			break;
+		#endregion
+		
+		#region transformando
+		case "transformando":
+			if (alarm[6]==-1) alarm[6] = room_speed*4;
+		break;
+		#endregion
+		
 		#region parado
 		case "parado":
 			image_angle = lerp(image_angle,0,.1);
@@ -190,7 +229,7 @@ if (!global.especial_ativo)
 		case "knockback":
 //		sprite_index = asset_get_index("spr_inimigo_01_apanhando_"+string(skin))
 			z_pos+=z_pos_add;
-			if (z_pos>-16) && (subir)
+			if (z_pos>-5) && (subir)
 			{
 				z_pos_add-=.25;
 			}else{
@@ -204,8 +243,8 @@ if (!global.especial_ativo)
 					z_pos_add = -2;
 				}
 			}
-			image_angle+=2.2 * xscale;
-			velh = xscale*2*-1;
+			image_angle+=4 * xscale;
+			velh = xscale*-1;
 			velv = 0;
 
 		break;
