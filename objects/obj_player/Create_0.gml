@@ -21,6 +21,6 @@ tempo_combo = tempo_padrao;
 estado = "parado";
 
 //saude
-hp_max = 1;
+hp_max = 100;
 energia = 0;
 hp = hp_max;

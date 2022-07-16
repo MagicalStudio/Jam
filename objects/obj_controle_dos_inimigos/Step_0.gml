@@ -8,3 +8,5 @@ if (room==rm_sala_do_boss) or (room==rm_sala_do_boss_restart)
 		}
 	}
 }
+
+show_debug_message(quantidade_inimigos_atacando);

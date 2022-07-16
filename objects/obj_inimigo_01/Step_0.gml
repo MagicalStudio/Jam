@@ -15,7 +15,7 @@ if (!global.especial_ativo)
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
-				obj_controle_dos_inimigos.inimigos01_array = false;
+				//obj_controle_dos_inimigos.inimigos01_array = false;
 			}
 			
 			velh = 0;
@@ -37,7 +37,7 @@ if (!global.especial_ativo)
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
-				obj_controle_dos_inimigos.inimigos01_array = false;
+				obj_controle_dos_inimigos.quantidade_inimigos_atacando--;
 			}
 			
 			if (obj_player.x > x) xscale  = 1;
@@ -68,21 +68,27 @@ if (!global.especial_ativo)
 			{
 				estado = "andando";
 			}else{
-				with(obj_controle_dos_inimigos)
+				
+				if (!escolhido_para_atacar)
 				{
-					if (inimigos01_array==false)
+					with(obj_controle_dos_inimigos)
 					{
-						event_user(0);
+						if (quantidade_inimigos_atacando<2)
+						{
+							event_user(0);
+						}
 					}
 				}
+				
 				velv = 0;
 				velh = 0;
 				if (escolhido_para_atacar)
 				{
+					aumentar_x = false;
 					timer_para_avancar--;
 					if (timer_para_avancar <= 0)
 					{
-						if (distance_to_object(obj_player) > 10)
+						if (distance_to_object(obj_player) > 10) && (!aumentar_x)
 						{
 							sprite_index = asset_get_index("spr_inimigo_01_andando_"+string(skin))
 							direcao_andar = point_direction(x,y,obj_player.x,obj_player.y);
@@ -95,8 +101,15 @@ if (!global.especial_ativo)
 								var y_add = sign(obj_player.y-y);
 								y+=y_add;
 							}else{
-								estado = "atacar";
-								timer_para_avancar = 40;
+								if (ceil(x)!=ceil(obj_player.x+x_atacar))
+								{
+									aumentar_x = true;
+									var x_add_ = sign(obj_player.x+x_atacar-x);
+									x+=x_add_;
+								}else{
+									estado = "atacar";
+									timer_para_avancar = 40;
+								}
 							}
 						}
 					}
@@ -143,7 +156,7 @@ if (!global.especial_ativo)
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
-				obj_controle_dos_inimigos.inimigos01_array = false;
+				obj_controle_dos_inimigos.quantidade_inimigos_atacando--;
 			}
 				
 			velh = lengthdir_x(vel,direcao_voltar);
@@ -171,7 +184,7 @@ if (!global.especial_ativo)
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
-				obj_controle_dos_inimigos.inimigos01_array = false;
+				obj_controle_dos_inimigos.quantidade_inimigos_atacando--;
 			}
 			
 			if (alarm[2] == -1) 
@@ -220,7 +233,7 @@ if (!global.especial_ativo)
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
-				obj_controle_dos_inimigos.inimigos01_array = false;
+				obj_controle_dos_inimigos.quantidade_inimigos_atacando--;
 			}
 		break;
 		#endregion
@@ -231,7 +244,7 @@ if (!global.especial_ativo)
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
-				obj_controle_dos_inimigos.inimigos01_array = false;
+				obj_controle_dos_inimigos.quantidade_inimigos_atacando--;
 			}
 			//velv=-1;
 			image_angle = lerp(image_angle,0,.1);

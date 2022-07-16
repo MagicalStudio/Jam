@@ -59,23 +59,21 @@ function ativar_especial()
 	}
 }
 
-///@func inimigos_01_na_view()
-function inimigos_01_na_view(){
+///@func inimigos_escolhidos_para_atacar()
+function inimigos_escolhidos_para_atacar(){
 	
 	var inimigos = [];	
 	
-	var qnt_inimigos = instance_number(obj_inimigo_01)
+	var qnt_inimigos = instance_number(obj_inimigo_pai)
 	for (var i = 0; i < qnt_inimigos; i++)
 	{
-		var inimigo = instance_find(obj_inimigo_01,i);
+		var inimigo = instance_find(obj_inimigo_pai,i);
 		if (inimigo.escolhido_para_atacar = false)
 		{
 			if (inimigo.estado == "atacando")
 			{	
 				inimigos[array_length(inimigos)] = inimigo.id;
 			}
-		}else{
-			return false
 		}
 	}
 	
@@ -83,29 +81,6 @@ function inimigos_01_na_view(){
 	
 }
 
-///@func inimigos_02_na_view()
-function inimigos_02_na_view(){
-	
-	var inimigos = [];	
-	
-	var qnt_inimigos = instance_number(obj_inimigo_02)
-	for (var i = 0; i < qnt_inimigos; i++)
-	{
-		var inimigo = instance_find(obj_inimigo_02,i);
-		if (inimigo.escolhido_para_atacar = false)
-		{
-			if (inimigo.estado == "atacando")
-			{	
-				inimigos[array_length(inimigos)] = inimigo.id;
-			}
-		}else{
-			return false
-		}
-	}
-	
-	return inimigos;
-	
-}
  
 ///@func transicao()
 ///@arg proximaRoom

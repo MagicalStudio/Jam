@@ -5,6 +5,8 @@ global.pontos_especial = 300;
 randomize();
 
 //inimigo 01 
-inimigos01_array = false;
-//inimigo 02
-inimigos02_array = false;
+inimigos_array = 0;
+quantidade_inimigos_atacando = 0;
+
+inimigo_escolhido = -1;
+inimigo_number = 0;
