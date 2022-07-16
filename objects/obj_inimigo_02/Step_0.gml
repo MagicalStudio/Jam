@@ -61,7 +61,7 @@ if (!global.especial_ativo)
 		case "atacando":
 			z_pos = lerp(z_pos,0,.1);
 			image_angle = lerp(image_angle,0,.1);
-			if (!escolhido_para_atacar) sprite_index = asset_get_index("spr_inimigo_01_armando_"+string(skin))
+			if (!escolhido_para_atacar) sprite_index = spr_inimigo_02_armando_1;
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 	

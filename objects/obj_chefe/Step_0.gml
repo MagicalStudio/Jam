@@ -210,6 +210,17 @@ if (!global.especial_ativo)
 				
 				quantidade_de_golpes_tomados++;
 				hp-=colisao.dano;
+				
+				if (hp <= 0)
+				{
+					if (instance_exists(obj_inimigo_pai))
+					{
+						instance_destroy(obj_inimigo_pai);
+					}
+					
+					estado = "morto";
+				}
+				
 				if (quantidade_de_golpes_tomados==3) 
 				{
 					quantidade_de_golpes_tomados = 0;
@@ -263,6 +274,20 @@ if (!global.especial_ativo)
 		case "levantando":
 			image_angle = lerp(image_angle,0,.1);
 			if (round(image_angle)==0) estado = "parado";
+		break;
+		#endregion
+		
+		#region morto
+		case "morto":
+			var colisao = collision_rectangle(bbox_left,bbox_top,bbox_right,y,obj_player_golpe,true,true);
+			if (colisao) 
+			{
+				if (!instance_exists(obj_ko))
+				{
+					instance_create_depth(x,y,depth,obj_impacto);
+					instance_create_depth(0,0,depth,obj_ko);
+				}
+			}
 		break;
 		#endregion
 	}
