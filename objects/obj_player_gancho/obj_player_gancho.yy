@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "player",
-    "path": "folders/Objects/placa/player.yy",
+    "path": "folders/Objects/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_player_gancho",

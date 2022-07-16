@@ -1,17 +1,21 @@
 if (room == rm_sala_do_boss)
 {
-	x = 32;
-	y = 96;
-	
-	
-	obj_controle_vida_e_energia.status[0] = hp;
-	obj_controle_vida_e_energia.status[1] = energia;
-	
+	estado = "parado";
+	xscale = 1;
+	status_manter = [hp,energia];	
+	x=32;
+	y=96;
 }
-
 
 if (room == rm_sala_do_boss_restart)
 {
-	energia = obj_controle_vida_e_energia.status[1];
-	hp = obj_controle_vida_e_energia.status[0];
+	
+	estado = "parado";
+	xscale = 1;
+	
+	hp = status_manter[0];
+	energia = status_manter[1];
+	
+	x=32;
+	y=96;
 }

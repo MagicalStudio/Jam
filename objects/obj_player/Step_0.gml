@@ -202,7 +202,7 @@ switch(estado)
 	break;
 	#endregion
 	
-	#region morto
+	#region morto 
 		case "morto":
 		depth=-200;
 		instance_destroy(obj_hud);

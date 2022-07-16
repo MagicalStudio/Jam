@@ -1,3 +1,5 @@
+
+
 depth = -16000;
 
 var camx = camera_get_view_x(view_camera[0]);
@@ -13,7 +15,7 @@ if (!surface_exists(surf))
 	surface_copy(surf,0,0,application_surface);
 	surface_reset_target();
 	instance_deactivate_all(true);
-	instance_activate_object(obj_controle_vida_e_energia);
+
 }else{
 	draw_surface_stretched(surf,camx,camy,camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]))
 }
@@ -58,38 +60,29 @@ if (xscale>1)
 				break;
 				
 				case "Reiniciar":
-					if (!instance_exists(obj_transicao))
+					if (room == rm_corredor)
 					{
-						if (room == rm_corredor)
-						{
-							if (!instance_exists(obj_transicao))
-							{
-								reiniciar();
-							}
-						}
-						
-						if (room == rm_sala_do_boss)
-						{
-							if (!instance_exists(obj_transicao))
-							{
-								if (instance_exists(obj_player))
-								{
-									instance_destroy(obj_player);
-								}
-								transicao(rm_sala_do_boss_restart);
-							}
-						}
-						
-						if (room == rm_sala_do_boss_restart)
-						{
-							if (!instance_exists(obj_reiniciar))
-							{
-								reiniciar();
-							}
-						}
+						reiniciar();
 					}
+						
+					if (room == rm_sala_do_boss)
+					{
+						transicao(rm_sala_do_boss_restart);
+					}
+						
+					if (room == rm_sala_do_boss_restart)
+					{
+						reiniciar();
+					}
+					
 				break;
 			}
+			instance_activate_object(obj_player);
+			obj_player.estado = "parado";
+			instance_activate_object(obj_camera);
+			surface_free(surf);	
+			surf = -1;
+			instance_destroy();
 		}
 	}
 	draw_set_halign(-1);
