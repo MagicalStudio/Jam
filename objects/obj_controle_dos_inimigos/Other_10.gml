@@ -23,6 +23,7 @@ if (inimigos_array!=false) && (quantidade_inimigos_atacando<2)
 				if (inimigo.escolhido_para_atacar)
 				{
 					inimigo_escolhido.x_atacar = inimigo.x_atacar*-1;
+					break;
 				}
 			}
 		}

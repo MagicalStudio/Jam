@@ -8,6 +8,7 @@ direcao_andar = 0;
 direcao_voltar = 0;
 distancia_voltar = 60;
 variancia = 80;
+aumentar_x = false;
 
 //saude
 hp_max = 7;
