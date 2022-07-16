@@ -27,21 +27,25 @@
     {"compositeImage":{"FrameId":{"name":"e67f82f4-8524-4944-89cd-7aa09a09edb5","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"e67f82f4-8524-4944-89cd-7aa09a09edb5","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"LayerId":{"name":"18779b06-2ccc-4b8f-8d6d-b6984284e21f","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_inimigo_02_parado_1","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"resourceVersion":"1.0","name":"e67f82f4-8524-4944-89cd-7aa09a09edb5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"29d046bf-4e0f-4b13-b26a-5cfd549e4638","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"29d046bf-4e0f-4b13-b26a-5cfd549e4638","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"LayerId":{"name":"18779b06-2ccc-4b8f-8d6d-b6984284e21f","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_inimigo_02_parado_1","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"resourceVersion":"1.0","name":"29d046bf-4e0f-4b13-b26a-5cfd549e4638","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_inimigo_02_parado_1","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 5.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 2.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"410dae19-beb3-4d09-a244-e06451e45f52","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e67f82f4-8524-4944-89cd-7aa09a09edb5","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b85c2a0d-638f-4b50-918e-6446ad1983be","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29d046bf-4e0f-4b13-b26a-5cfd549e4638","path":"sprites/spr_inimigo_02_parado_1/spr_inimigo_02_parado_1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

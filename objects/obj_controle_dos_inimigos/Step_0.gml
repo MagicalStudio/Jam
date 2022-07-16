@@ -1,4 +1,4 @@
-if (room==rm_sala_do_boss)
+if (room==rm_sala_do_boss) or (room==rm_sala_do_boss_restart)
 {
 	if (alarm[0]==-1)
 	{

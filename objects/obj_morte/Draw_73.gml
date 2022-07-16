@@ -1,17 +1,13 @@
-depth = -500;
+depth = -16000;
 
 var camx = camera_get_view_x(view_camera[0]);
 var camy = camera_get_view_y(view_camera[0]);
 
 var camw = camera_get_view_width(view_camera[0]);
-var camh = camera_get_view_height(view_camera[0]);
-
-var vieww = view_get_wport(view_camera[0]);
-var viewh = view_get_hport(view_camera[0]);
 
 if (!surface_exists(surf))
 {
-	surf = surface_create(vieww,viewh);
+	surf = surface_create(view_get_wport(view_camera[0]),view_get_hport(view_camera[0]));
 	surface_set_target(surf);
 	draw_clear_alpha(c_black,0);
 	surface_copy(surf,0,0,application_surface);
@@ -19,7 +15,7 @@ if (!surface_exists(surf))
 	instance_deactivate_all(true);
 	instance_activate_object(obj_controle_vida_e_energia);
 }else{
-	draw_surface(surf,camx,camy)
+	draw_surface_stretched(surf,camx,camy,camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]))
 }
 
 draw_sprite_ext(spr_demitido,0,camx+camw/2,room_height/2,xscale,yscale,0,c_white,1);

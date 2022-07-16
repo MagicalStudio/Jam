@@ -211,7 +211,6 @@ switch(estado)
 	#endregion
 }
 
-show_debug_message(estado)
 if (velh!=0) && (estado!="knockback") && (estado!="caido") && (estado!="levantando") && (estado!="morto")
 {
 	xscale = sign(velh);

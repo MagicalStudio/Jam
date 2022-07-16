@@ -1,5 +1,4 @@
 ///@desc criar area de ataque
-ataque = choose("taser","porrada");
 if (estado=="atacar")
 {
 	switch(ataque)

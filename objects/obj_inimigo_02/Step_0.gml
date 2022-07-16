@@ -24,12 +24,15 @@ if (!global.especial_ativo)
 			{
 				if (alarm[0]==-1) alarm[0] = room_speed/2+irandom_range(-20,20);
 			}
+			
+			sprite_index = spr_inimigo_02_parado_1;
 	
 		break;
 		#endregion 
 		
 		#region andando
 		case "andando":
+			sprite_index = spr_inimigo_02_andando_1;
 			z_pos = lerp(z_pos,0,.1);
 			image_angle = lerp(image_angle,0,.1);
 			if (escolhido_para_atacar)
@@ -58,6 +61,7 @@ if (!global.especial_ativo)
 		case "atacando":
 			z_pos = lerp(z_pos,0,.1);
 			image_angle = lerp(image_angle,0,.1);
+			
 			if (obj_player.x > x) xscale  = 1;
 			else xscale = -1;
 	
@@ -81,15 +85,18 @@ if (!global.especial_ativo)
 					{
 						if (distance_to_object(obj_player) > 10)
 						{
+							sprite_index = spr_inimigo_02_andando_1;
 							direcao_andar = point_direction(x,y,obj_player.x,obj_player.y);
 							velh = lengthdir_x(vel,direcao_andar);
 							velv = lengthdir_y(vel,direcao_andar);			
 						}else{
+							sprite_index = spr_inimigo_02_armando_1
 							if (y != clamp(y,obj_player.y-3,obj_player.y+3))
 							{
 								var y_add = sign(obj_player.y-y);
 								y+=y_add;
 							}else{
+								ataque = choose("taser","porrada");
 								estado = "atacar";
 								timer_para_avancar = 40;
 							}
@@ -103,6 +110,7 @@ if (!global.especial_ativo)
 		
 		#region atacar
 		case "atacar":
+			sprite_index = spr_inimigo_02_armando_1;
 			z_pos = lerp(z_pos,0,.1);
 			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
@@ -118,6 +126,10 @@ if (!global.especial_ativo)
 		
 		#region ataquei
 		case "ataquei":
+			
+			sprite_index = spr_inimigo_02_atacando_1;
+			if (ataque == "taser") image_index = 1;
+			else image_index = 0;
 			z_pos = lerp(z_pos,0,.1);
 			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
@@ -128,6 +140,7 @@ if (!global.especial_ativo)
 		
 		#region voltar
 		case "voltar":
+			sprite_index = spr_inimigo_02_andando_1;
 			z_pos = lerp(z_pos,0,.1);
 			image_angle = lerp(image_angle,0,.1);
 			if (obj_player.x > x) xscale  = 1;
@@ -153,6 +166,7 @@ if (!global.especial_ativo)
 		
 		#region recebendo_dano
 		case "recebendo_dano":
+			sprite_index = spr_inimigo_02_apanhando_1
 			velv = 0;
 			velh = 0;
 			z_pos = lerp(z_pos,0,.1);
@@ -172,6 +186,7 @@ if (!global.especial_ativo)
 	
 		#region knockback
 		case "knockback":
+			sprite_index = spr_inimigo_02_apanhando_1;
 			z_pos+=z_pos_add;
 			if (z_pos>-8) && (subir)
 			{
@@ -202,6 +217,7 @@ if (!global.especial_ativo)
 		#region caido
 
 		case "caido":
+			sprite_index = spr_inimigo_02_apanhando_1;
 			velv = 0;
 			velh = 0;
 			if (alarm[3]==-1) alarm[3] = room_speed;
@@ -216,6 +232,7 @@ if (!global.especial_ativo)
 		#region levantando
 
 		case "levantando":
+			sprite_index = spr_inimigo_02_apanhando_1;
 			if (escolhido_para_atacar)
 			{
 				escolhido_para_atacar = false;
@@ -231,6 +248,7 @@ if (!global.especial_ativo)
 	if (alarm[5] == -1) && (instance_exists(obj_prancheta))
 	{
 		alarm[5] = room_speed/2;
+		sprite_index = spr_inimigo_02_apanhando_1;
 	}
 }
 
