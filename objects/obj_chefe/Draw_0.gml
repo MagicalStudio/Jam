@@ -8,4 +8,4 @@ draw_text(x,y-sprite_height,estado);
 draw_text(x,y-sprite_height*1.5,ataque);
 draw_set_color(c_white)
 
-//draw_rectangle(bbox_left,y,bbox_right,y+30,false)
+draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)

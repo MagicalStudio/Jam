@@ -21,9 +21,12 @@ if (instance_exists(obj_chefe)) // desenhando vida do boss
 // nem lembro mais oq isso faz.
 if (instance_exists(obj_inimigo_pai))
 {
-	if (!enemy_is_inside_view_camera(view_camera[0]))
+	if (room == rm_corredor)
 	{
-		draw_sprite(spr_seta_go,0,cam_x+camera_get_view_width(view_camera[0])-48,room_height/2)
+		if (!enemy_is_inside_view_camera(view_camera[0]))
+		{
+			draw_sprite(spr_seta_go,0,cam_x+camera_get_view_width(view_camera[0])-48,room_height/2)
+		}
 	}
 }else{
 	if (room == rm_corredor)

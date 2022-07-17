@@ -1,2 +1,2 @@
 ///@desc knockback time
-estado = "parado";
+if (estado!="knockback") estado = "parado";

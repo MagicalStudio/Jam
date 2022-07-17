@@ -1,1 +1,1 @@
-estado = "levantando";
+if (estado!="fragilizado") estado = "levantando";
