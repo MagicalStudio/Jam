@@ -107,7 +107,7 @@ if (!global.especial_ativo)
 				#region chifre
 				case "chifre":
 					z_pos = lerp(z_pos,0,.1);
-					var vel_ = 2;
+					var vel_ = 3;
 					velh = lengthdir_x(spd*vel_,direcao_correr);
 					velv = lengthdir_y(spd*vel_,direcao_correr);
 				
@@ -200,7 +200,7 @@ if (!global.especial_ativo)
 						instance_create_depth(-100,-100,depth,obj_impressora_boss_fight);
 						alarm[3] = room_speed * 3;
 					}else{
-						obj_impressora_boss_fight.xscale+=.025;
+						obj_impressora_boss_fight.xscale+=.010;
 					}
 				break;
 				#endregion

@@ -43,7 +43,7 @@ if (z_pos >= 0) && (xscale == 1)
 	if (cair = true)
 	{
 		xscale = lerp(xscale,1,.1);
-		z_pos += 5;
+		z_pos += 3;
 		if (z_pos + 5 >= 0) && (!ja_ataquei)
 		{
 			desenhar_aviso = false;
@@ -61,13 +61,13 @@ if (z_pos >= 0) && (xscale == 1)
 		if (xscale < 1) && (obj_chefe.estado = "atacar")
 		{
 			x = obj_chefe.x;
-			y = obj_chefe.y-obj_chefe.sprite_height/2;
+			y = obj_chefe.y-obj_chefe.sprite_height/2-30;
 		}else{
-			z_pos = lerp(z_pos,-200,.1);
+			z_pos-=2;
 			if (z_pos < -150) && (alarm[0]==-1) alarm[0] = room_speed *2;
 			if (alarm[0]!=-1)
 			{
-				x=obj_player.x
+				x=lerp(x,obj_player.x,.1)
 				y=obj_player.y-5;
 			}
 			xscale = lerp(xscale,1,.1);

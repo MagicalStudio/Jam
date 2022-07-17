@@ -40,10 +40,7 @@ if (!destruido)
 if (hp<=0) && (!destruido)
 {
 	destruido = true;
-	spd = 3;
-	velh = spd * sign(x-obj_player.x);
-	velv = -spd;
-	image_alpha = .5;
+	image_alpha = .1;
 	instance_create_depth(x,y,depth,obj_agua,{y_destino : bbox_bottom-10});
 				
 	repeat(6)
@@ -57,16 +54,12 @@ if (hp<=0) && (!destruido)
 
 if (destruido)
 {
-	x+=velh*.5;
-	y+=velv;
-	velv+=.25;
-	if (y >=ystart)
+	image_alpha+=.001;
+	if (image_alpha>=1)
 	{
-		y=ystart;
-	}
-	if (x != clamp(x,xstart-40, xstart+40))
-	{
-		x=xstart+40*sign(velh);
+		image_alpha = 1;
+		hp = 4;
+		destruido = false;
 	}
 }
 

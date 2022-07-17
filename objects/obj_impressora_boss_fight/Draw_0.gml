@@ -1,11 +1,8 @@
-if (!cair)
+if (desenhar_aviso) && (xscale >=1)
 {
-	draw_sprite(spr_sombra,0,x,y+sprite_height/2)
+	draw_sprite(spr_perigo,0,x,32);
 }else{
-	if (desenhar_aviso)
-	{
-		draw_sprite(spr_perigo,0,obj_player.x,obj_player.y-60);
-	}
+	if (xscale >= 1) draw_sprite(spr_sombra,0,x,y+sprite_height/2)
 }
 
 draw_sprite_ext(sprite_index,image_index,x,y+z_pos,xscale,xscale,image_angle,c_white,image_alpha);

@@ -24,3 +24,5 @@ estado = "parado";
 hp_max = 10;
 energia = 0;
 hp = hp_max;
+
+status_manter = [hp,energia]
