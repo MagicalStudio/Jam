@@ -14,8 +14,8 @@
   "soundFile": "msc_corredor.wav",
   "duration": 27.440113,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "musica",
+    "path": "folders/Sounds/musica.yy",
   },
   "resourceVersion": "1.0",
   "name": "msc_corredor",
