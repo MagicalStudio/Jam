@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_player_parado",
-    "path": "sprites/spr_player_parado/spr_player_parado.yy",
+    "name": "spr_player_andando",
+    "path": "sprites/spr_player_andando/spr_player_andando.yy",
   },
   "solid": false,
   "visible": true,

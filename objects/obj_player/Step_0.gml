@@ -97,7 +97,9 @@ if (!instance_exists(obj_morte))
 			z_pos = lerp(z_pos,0,.1);
 			combo_fase = 0;
 			tempo_combo=tempo_padrao;
-		
+			velv = 0;
+			velh = 0;
+			
 			if (hp<=0)
 			{
 				estado = "knockback";

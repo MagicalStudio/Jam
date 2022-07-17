@@ -6,7 +6,7 @@ velh = 0;
 velv = 0;
 direcao_andar = 0;
 direcao_voltar = 0;
-distancia_voltar = 40;
+distancia_voltar = 40+irandom_range(-20,20);
 variancia = 80;
 aumentar_x = false;
 

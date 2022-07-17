@@ -205,6 +205,9 @@ if (!global.especial_ativo)
 											obj_impressora_boss_fight.hp = 0;
 										}  
 									}
+									
+									instance_create_depth(0,0,0,obj_screen_shake);
+									audio_play_sound(snd_queda,1,0);
 								
 									caindo = false;
 									timer_cair = room_speed;
