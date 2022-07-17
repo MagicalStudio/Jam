@@ -1,6 +1,6 @@
 if (keyboard_check_pressed(vk_space))
 {
-	if (room == rm_menu) transicao(rm_corredor);
+	if (room == rm_menu) transicao(rm_hq);
 }
 
 if (keyboard_check_pressed(vk_escape))

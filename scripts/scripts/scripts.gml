@@ -22,7 +22,7 @@ function instance_inside_view_camera(){
 function enemy_is_inside_view_camera(){
 	
 	var cam    = argument0;
-	var object = instance_nearest(x,y,obj_inimigo_pai);
+	var object = obj_inimigo_pai;
 		
 	var cam_width = camera_get_view_width(cam);
 	var cam_x = camera_get_view_x(cam);
@@ -30,7 +30,7 @@ function enemy_is_inside_view_camera(){
 	var cam_height = camera_get_view_height(cam);
 	var cam_y = camera_get_view_y(cam);
 			
-	if (point_in_rectangle(object.x,object.y,cam_x,cam_y,cam_x+cam_width,cam_y+cam_height))
+	if (collision_rectangle(global.min_x,0,global.min_x+cam_width,room_height,object,true,true))
 	{
 		return true;
 	}

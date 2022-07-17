@@ -44,7 +44,7 @@ if (hp<=0) && (!destruido)
 	velh = spd * sign(x-obj_player.x);
 	velv = -spd;
 	image_alpha = .5;
-	instance_create_depth(x,y,depth,obj_agua,{y_destino : bbox_bottom-10});
+	instance_create_depth(x,y,depth,obj_agua,{y_destino : (y+sprite_height/2)});
 				
 	repeat(6)
 	{

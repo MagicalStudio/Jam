@@ -36,6 +36,7 @@ width = camera_get_view_width(cam);
 global.min_x = camera_get_view_x(cam);
 
 x = clamp(x,global.min_x+sprite_width/2,global.min_x+width);
+obj_camera.x=clamp(obj_camera,global.min_x,room_width);
 
 if (room == rm_corredor)
 {
@@ -45,17 +46,22 @@ if (room == rm_corredor)
 
 		if (global.min_x == clamp(global.min_x,512,512+width/4)) or (global.min_x == clamp(global.min_x,1024,1024+width/4))
 		{
-			obj_camera.x = clamp(obj_camera.x,global.min_x+width/2, room_width);
+			show_debug_message("Travada");
+			obj_camera.x = clamp(obj_camera.x,global.min_x+width/2, global.min_x+width/2);
 			x = clamp(x,global.min_x+sprite_width/2,width+global.min_x-sprite_width/4);
 		}else{
+			show_debug_message("seguindo");
 			obj_camera.x = x;
+			obj_camera.x = clamp(x, global.min_x + width/2, room_width);
 		}
 
 	}else{
+		show_debug_message("seguindo");
 		obj_camera.x = x;
+		obj_camera.x = clamp(x, global.min_x + width/2, room_width);
 	}
 }
-obj_camera.clamp(obj_camera,global.min_x,room_width);
+
 y = clamp(y,sprite_height/2,room_height-sprite_height/2);
 
 

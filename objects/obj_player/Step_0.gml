@@ -14,7 +14,8 @@ if (!instance_exists(obj_morte))
 	{
 		#region cutscene
 		case "cutscene":
-			
+			velv = 0;
+			velh = 0;
 		break;
 		#endregion
 		

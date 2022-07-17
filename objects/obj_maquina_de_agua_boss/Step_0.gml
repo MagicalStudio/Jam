@@ -41,7 +41,7 @@ if (hp<=0) && (!destruido)
 {
 	destruido = true;
 	image_alpha = .1;
-	instance_create_depth(x,y,depth,obj_agua,{y_destino : bbox_bottom-10});
+	instance_create_depth(x,y,depth,obj_agua,{y_destino : (y+sprite_height/2)});
 				
 	repeat(6)
 	{

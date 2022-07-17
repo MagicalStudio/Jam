@@ -10,13 +10,15 @@ if (instance_inside_view_camera(view_camera[0]))
 		}
 	}
 	
-	audio_play_sound(snd_boss_dano,1,0)
+	audio_play_sound(snd_boss_dano,5,0)
 	xscale *=-1;
 
 	if (!audio_is_playing(snd_soco))
 	{
 		audio_play_sound(snd_soco,1,false);
 	}
+	
+	audio_play_sound(snd_soco,3,0);
 	
 	repeat(3)
 	{

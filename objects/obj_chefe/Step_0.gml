@@ -250,11 +250,10 @@ if (!global.especial_ativo)
 				var colisao = collision_rectangle(bbox_left,bbox_top,bbox_right,y,obj_player_golpe,true,true);
 				if (colisao)
 				{
-					if (!audio_is_playing(snd_soco))
+					if (!audio_is_playing(snd_boss_dano))
 					{
-						audio_play_sound(snd_soco,1,false);
+						audio_play_sound(snd_boss_dano,6,false);
 					}
-					audio_play_sound(snd_boss_dano,1,0)
 				
 					instance_create_depth(x,y,depth,obj_impacto);
 				
