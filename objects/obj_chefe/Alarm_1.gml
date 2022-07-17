@@ -1,5 +1,5 @@
 ///@desc atacando
-if (estado!= "fragilizado") && (estado!= "morto")
+if (estado!= "fragilizado") && (estado!= "morto")&& (estado!="knockback") && (estado != "levantando") && (estado != "caido")
 {
 	if (ataque=="chifre")
 	{

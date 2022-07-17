@@ -22,3 +22,4 @@ dentro_da_tela = false;
 
 //skin
 skin = 1+irandom(1);
+

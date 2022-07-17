@@ -9,6 +9,8 @@ if (instance_inside_view_camera(view_camera[0]))
 			instance_destroy(obj_inimigo_pai);
 		}
 	}
+	
+	audio_play_sound(snd_boss_dano,1,0)
 	xscale *=-1;
 
 	if (!audio_is_playing(snd_soco))

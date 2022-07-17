@@ -54,6 +54,10 @@ if (z_pos >= 0) && (xscale == 1)
 				obj_player.xscale = sign(x-obj_player.x);
 				if (obj_player.xscale == 0) obj_player.xscale = choose(-1,1);
 				obj_player.hp -= obj_chefe.dano;
+				if (!audio_is_playing(snd_player_dano))
+				{
+					audio_play_sound(snd_player_dano,1,0);
+				}
 			}
 		}
 		z_pos = clamp(z_pos,-2000,0);

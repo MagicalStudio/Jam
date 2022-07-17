@@ -14,6 +14,11 @@ if (!global.especial_ativo)
 				audio_play_sound(snd_soco_inimigo,0,0);
 			}
 			instance_create_depth(x,y,depth,obj_impacto);
+			
+			if (!audio_is_playing(snd_player_dano))
+			{
+				audio_play_sound(snd_player_dano,1,0);
+			}
 		}		
 	}
 }

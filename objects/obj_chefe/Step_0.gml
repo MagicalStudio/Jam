@@ -121,11 +121,16 @@ if (!global.especial_ativo)
 					var player = instance_place(x,y,obj_player)
 					if (player)
 					{
-						if (depth<player.depth) && (player.estado!="knockback") && (player.estado!="caido") && (player.estado!="levantando")
+						var distancia_depth = abs(abs(depth)-abs(player.depth))
+						if (distancia_depth<20) && (player.estado!="knockback") && (player.estado!="caido") && (player.estado!="levantando")
 						{
 							player.estado = "knockback";
 							player.xscale = xscale;
 							player.hp -= dano;
+							if (!audio_is_playing(snd_player_dano))
+							{
+								audio_play_sound(snd_player_dano,1,false);
+							}
 						}
 					}
 				
@@ -133,7 +138,8 @@ if (!global.especial_ativo)
 					var impressora = instance_place(x,y,obj_impressora_boss_fight)
 					if (impressora)
 					{
-						if (depth<impressora.depth)
+						var distancia_depth = abs(abs(depth)-abs(impressora.depth))
+						if (distancia_depth<20)
 						{
 							impressora.hp=0;
 						}
@@ -175,17 +181,23 @@ if (!global.especial_ativo)
 			
 									if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_player,true,true))
 									{
-										if  (obj_player.depth > depth) && (obj_player.estado!="knockback") && (obj_player.estado!="caido") && (obj_player.estado!="levantando")
+										var distancia_depth = abs(abs(depth)-abs(obj_player.depth))
+										if  (distancia_depth<20) && (obj_player.estado!="knockback") && (obj_player.estado!="caido") && (obj_player.estado!="levantando")
 										{
 											obj_player.estado = "knockback";
 											obj_player.xscale = xscale;
 											obj_player.hp -= 3;
+											if(!audio_is_playing(snd_player_dano))
+											{
+												audio_play_sound(snd_player_dano,1,0);
+											}
 										}  
 									}
 							
 									if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_impressora_boss_fight,true,true))
 									{
-										if  (obj_impressora_boss_fight.depth > depth)
+										var distancia_depth = abs(abs(depth)-abs(obj_impressora_boss_fight.depth))
+										if  (distancia_depth < 20)
 										{
 											obj_impressora_boss_fight.hp = 0;
 										}  
@@ -236,6 +248,7 @@ if (!global.especial_ativo)
 					{
 						audio_play_sound(snd_soco,1,false);
 					}
+					audio_play_sound(snd_boss_dano,1,0)
 				
 					instance_create_depth(x,y,depth,obj_impacto);
 				

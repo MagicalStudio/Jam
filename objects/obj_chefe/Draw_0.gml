@@ -15,6 +15,7 @@ if (brilho!=0)
 {
 	if (potencia_do_brilho!=clamp(potencia_do_brilho,0,1))
 	{
+		audio_play_sound(snd_transformacao,1,0);
 		potencia_do_brilho_add*=-1;
 	}
 	
@@ -24,6 +25,6 @@ if (brilho!=0)
 	draw_sprite_ext(sprite_index,image_index,x,y+z_pos,xscale,yscale,image_angle,c_white,potencia_do_brilho);
 	gpu_set_fog(false,c_white,0,0);
 }else{
-	potencia_do_brilho_add = .05;
+	potencia_do_brilho_add = .025;
 	potencia_do_brilho = 0;
 }

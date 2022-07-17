@@ -6,6 +6,10 @@ if (caixa_de_colisao) && (estado!="caido") && (estado!="levantando") && (estado!
 		criar_pop_up("+"+string(caixa_de_colisao.pontos),x,y-sprite_height);
 		instance_create_depth(x+sprite_width/2*xscale,y,depth,obj_impacto)
 		global.score+=caixa_de_colisao.pontos;
+		if (!audio_is_playing(snd_inimigo_dano))
+		{
+			audio_play_sound(snd_inimigo_dano,1,0);
+		}
 		if (hp-caixa_de_colisao.dano < 0)
 		{
 			if (caixa_de_colisao.object_index==obj_player_gancho)
