@@ -12,4 +12,3 @@ if (point_distance(x,y,obj_player.x,y) > distancia_para_abrir) && (image_index =
 	audio_play_sound(snd_porta,0,0);
 }
 
-//asd
