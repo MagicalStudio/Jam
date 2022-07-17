@@ -16,10 +16,7 @@ quantidade_de_golpes_tomados = 0;
 
 //ataques
 dano = 3;
-
-//chifre
-direcao_correr = 0;
-
+  
 //pulo
 caindo = false;
 timer_cair = room_speed;
@@ -29,4 +26,5 @@ xscale = 1;
 yscale = 1;
 z_pos_add = 0;
 z_pos = 0;
-
+brilho = 0;
+potencia_do_brilho = 0;

@@ -117,6 +117,7 @@ if (hp<=0) && (!destruido)
 	var ellipse_collision = collision_ellipse(x-60,y-10,x+60,y+10,obj_chefe,true,true);
 	if (ellipse_collision)
 	{
+		obj_chefe.alarm[9] = 10;
 		obj_chefe.estado = "fragilizado";
 	}
 }

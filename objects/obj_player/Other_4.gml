@@ -1,6 +1,6 @@
 if (room == rm_sala_do_boss)
 {
-	estado = "parado";
+	estado = "cutscene";
 	xscale = 1;
 	status_manter = [hp,energia];	
 	x=32;

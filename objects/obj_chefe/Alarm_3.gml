@@ -1,2 +1,2 @@
 ///@desc criar 
-if (estado!="fragilizado") estado = "parado";
+if (estado!= "fragilizado") && (estado!= "morto") estado = "parado";

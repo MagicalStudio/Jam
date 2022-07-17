@@ -1,0 +1,1 @@
+if (instance_exists(obj_esposa)) obj_esposa.morrer = true;

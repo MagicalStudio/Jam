@@ -21,7 +21,7 @@ if (!global.especial_ativo)
 			
 			if (conversei) && (!audio_is_playing(dia_chefe))
 			{
-				if (instance_exists(obj_esposa)) obj_esposa.morrer = true;
+				if (alarm[10] == -1) alarm[10]=room_speed/2;
 			}
 			
 			if (obj_esposa.morrer == true)
@@ -44,12 +44,16 @@ if (!global.especial_ativo)
 		
 		#region transformando
 		case "transformando":
-			if (alarm[6]==-1) alarm[6] = room_speed*4;
+			if (alarm[6]==-1) alarm[6] = room_speed*3;
 		break;
 		#endregion
 		
 		#region parado
 		case "parado":
+			if (obj_player.estado == "cutscene")
+			{
+				obj_player.estado = "parado";
+			}
 			sprite_index = spr_chefe_forte_parado;
 			if (!audio_is_playing(msc_boss_fight))
 			{
@@ -114,7 +118,7 @@ if (!global.especial_ativo)
 					var player = instance_place(x,y,obj_player)
 					if (player)
 					{
-						if (depth>player.depth) && (player.estado!="knockback") && (player.estado!="caido") && (player.estado!="levantando")
+						if (depth<player.depth) && (player.estado!="knockback") && (player.estado!="caido") && (player.estado!="levantando")
 						{
 							player.estado = "knockback";
 							player.xscale = xscale;
@@ -126,7 +130,7 @@ if (!global.especial_ativo)
 					var impressora = instance_place(x,y,obj_impressora_boss_fight)
 					if (impressora)
 					{
-						if (depth>impressora.depth)
+						if (depth<impressora.depth)
 						{
 							impressora.hp=0;
 						}
@@ -136,6 +140,8 @@ if (!global.especial_ativo)
 			
 				#region pulo				
 				case "pulo":
+				if (alarm[8]==-1)
+				{
 					if (obj_player.x > x) xscale  = 1;
 					else xscale = -1;
 					if (point_distance(x,y,obj_player.x,obj_player.y-5) > 3) && (!caindo)
@@ -162,27 +168,30 @@ if (!global.especial_ativo)
 							z_pos += 5;
 							if (z_pos>=0)
 							{
-								z_pos = 0
-								if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_player,true,true))
-								{
-									if  (obj_player.depth < depth) && (obj_player.estado!="knockback") && (obj_player.estado!="caido") && (obj_player.estado!="levantando")
+								z_pos = 0;
+			
+									if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_player,true,true))
 									{
-										obj_player.estado = "knockback";
-										obj_player.xscale = xscale;
-										obj_player.hp -= 3;
-									}  
-								}
+										if  (obj_player.depth > depth) && (obj_player.estado!="knockback") && (obj_player.estado!="caido") && (obj_player.estado!="levantando")
+										{
+											obj_player.estado = "knockback";
+											obj_player.xscale = xscale;
+											obj_player.hp -= 3;
+										}  
+									}
 							
-								if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_impressora_boss_fight,true,true))
-								{
-									if  (obj_impressora_boss_fight.depth < depth)
+									if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_impressora_boss_fight,true,true))
 									{
-										obj_impressora_boss_fight.hp = 0;
-									}  
+										if  (obj_impressora_boss_fight.depth > depth)
+										{
+											obj_impressora_boss_fight.hp = 0;
+										}  
+									}
+								
+									caindo = false;
+									timer_cair = room_speed;
+									alarm[8]=room_speed
 								}
-								estado = "parado";
-								caindo = false;
-								timer_cair = room_speed;
 							}
 						}
 					}
@@ -210,43 +219,46 @@ if (!global.especial_ativo)
 	
 		#region fragilizado
 		case "fragilizado":
-			sprite_index = spr_chefe_forte_fragilizado;
-			image_angle = lerp(image_angle,0,.1);
-			z_pos = lerp(z_pos,0,.1);
-			velv = 0;
-			velh = 0;
-			var colisao = collision_rectangle(bbox_left,bbox_top,bbox_right,y,obj_player_golpe,true,true);
-			if (colisao)
+			if (alarm[9]==-1)
 			{
-				if (!audio_is_playing(snd_soco))
+				sprite_index = spr_chefe_forte_fragilizado;
+				image_angle = lerp(image_angle,0,.1);
+				z_pos = lerp(z_pos,0,.1);
+				velv = 0;
+				velh = 0;
+				var colisao = collision_rectangle(bbox_left,bbox_top,bbox_right,y,obj_player_golpe,true,true);
+				if (colisao)
 				{
-					audio_play_sound(snd_soco,1,false);
-				}
-				
-				instance_create_depth(x,y,depth,obj_impacto);
-				
-				quantidade_de_golpes_tomados++;
-				hp-=colisao.dano;
-				
-				if (hp <= 0)
-				{
-					if (instance_exists(obj_inimigo_pai))
+					if (!audio_is_playing(snd_soco))
 					{
-						instance_destroy(obj_inimigo_pai);
+						audio_play_sound(snd_soco,1,false);
 					}
-					
-					estado = "morto";
-				}
 				
-				if (quantidade_de_golpes_tomados==3) 
-				{
-					quantidade_de_golpes_tomados = 0;
-					if (colisao.object_index == obj_player_gancho)
+					instance_create_depth(x,y,depth,obj_impacto);
+				
+					quantidade_de_golpes_tomados++;
+					hp-=colisao.dano;
+				
+					if (hp <= 0)
 					{
-						estado = "knockback";
-						xscale = sign(obj_player.x-x);
-					}else{
-						estado = "parado";
+						if (instance_exists(obj_inimigo_pai))
+						{
+							instance_destroy(obj_inimigo_pai);
+						}
+					
+						estado = "morto";
+					}
+				
+					if (quantidade_de_golpes_tomados==3) 
+					{
+						quantidade_de_golpes_tomados = 0;
+						if (colisao.object_index == obj_player_gancho)
+						{
+							estado = "knockback";
+							xscale = sign(obj_player.x-x);
+						}else{
+							estado = "parado";
+						}
 					}
 				}
 			}

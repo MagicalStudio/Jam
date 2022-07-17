@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 1,
-  "volume": 1.0,
+  "volume": 0.25,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "dia_chefe2.wav",
-  "duration": 1.892426,
+  "soundFile": "snd_soco_inimigo.mp3",
+  "duration": 0.339592,
   "parent": {
-    "name": "dialogos",
-    "path": "folders/Sounds/dialogos.yy",
+    "name": "sound effects",
+    "path": "folders/Sounds/sound effects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "dia_chefe2",
+  "name": "snd_soco_inimigo",
   "tags": [],
   "resourceType": "GMSound",
 }

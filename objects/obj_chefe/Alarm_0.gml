@@ -1,5 +1,5 @@
 ///@desc escolher ataque
-if (estado != "fragilizado")
+if (estado!= "fragilizado") && (estado!= "morto")
 {
 	if (ataque != "0")
 	{

@@ -12,6 +12,12 @@ if (!instance_exists(obj_morte))
 {
 	switch(estado)
 	{
+		#region cutscene
+		case "cutscene":
+			
+		break;
+		#endregion
+		
 		#region parado
 		case "parado":
 			velv = (down - up) * vel;
@@ -63,19 +69,19 @@ if (!instance_exists(obj_morte))
 				{
 					if (combo_fase == 2) // gancho
 					{
-						instance_create_depth(x,y,depth,obj_player_gancho,{image_xscale : xscale, dano : 2, pontos : 200})
+						instance_create_depth(x+10*xscale,y,depth,obj_player_gancho,{image_xscale : xscale, dano : 2, pontos : 200})
 						combo_fase = 0; // volto pro soco
 						sprite_index = spr_player_gancho;
 						alarm[0] = tempo_ataque*2
 					}else if (combo_fase == 1) // chute
 					{
-						instance_create_depth(x,y,depth,obj_player_chute,{image_xscale : xscale, dano : 1, pontos : 100})
+						instance_create_depth(x+10*xscale,y,depth,obj_player_chute,{image_xscale : xscale, dano : 1, pontos : 100})
 						combo_fase=2; // vou pro gancho
 						alarm[0] = tempo_ataque;
 						sprite_index = spr_player_chutando;
 					}else if (combo_fase == 0) //soco
 					{
-						instance_create_depth(x,y,depth,obj_player_soco,{image_xscale : xscale, dano : 1, pontos : 50})
+						instance_create_depth(x+10*xscale,y,depth,obj_player_soco,{image_xscale : xscale, dano : 1, pontos : 50})
 						combo_fase=1; // vou pro chute
 						sprite_index = spr_player_socando
 						alarm[0] = tempo_ataque

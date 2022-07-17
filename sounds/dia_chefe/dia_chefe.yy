@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "dia_chefe.mp3",
-  "duration": 3.792,
+  "duration": 2.847347,
   "parent": {
     "name": "dialogos",
     "path": "folders/Sounds/dialogos.yy",

@@ -1,1 +1,1 @@
-if (estado!="fragilizado") estado = "levantando";
+if (estado!= "fragilizado") && (estado!= "morto") estado = "levantando";

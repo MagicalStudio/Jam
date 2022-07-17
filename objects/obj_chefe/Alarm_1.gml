@@ -1,5 +1,5 @@
 ///@desc atacando
-if (estado!="fragilizado")
+if (estado!= "fragilizado") && (estado!= "morto")
 {
 	if (ataque=="chifre")
 	{

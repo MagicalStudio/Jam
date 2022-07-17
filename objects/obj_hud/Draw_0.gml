@@ -21,7 +21,7 @@ if (instance_exists(obj_chefe)) // desenhando vida do boss
 // nem lembro mais oq isso faz.
 if (instance_exists(obj_inimigo_pai))
 {
-	if (room == rm_corredor)
+	if (room == rm_corredor) && (cam_x < 1280)
 	{
 		if (!enemy_is_inside_view_camera(view_camera[0]))
 		{

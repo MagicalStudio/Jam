@@ -9,7 +9,12 @@ if (!global.especial_ativo)
 			player.hp -= dano;
 			player.estado = "knockback";
 			player.xscale = sign(x-obj_player.x);
-		}
+			if (!audio_is_playing(snd_soco_inimigo))
+			{
+				audio_play_sound(snd_soco_inimigo,0,0);
+			}
+			instance_create_depth(x,y,depth,obj_impacto);
+		}		
 	}
 }
 
