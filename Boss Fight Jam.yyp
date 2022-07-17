@@ -37,6 +37,7 @@
     {"id":{"name":"obj_agua","path":"objects/obj_agua/obj_agua.yy",},"order":7,},
     {"id":{"name":"spr_inimigo_02_apanhando_1","path":"sprites/spr_inimigo_02_apanhando_1/spr_inimigo_02_apanhando_1.yy",},"order":4,},
     {"id":{"name":"obj_controle_dos_inimigos","path":"objects/obj_controle_dos_inimigos/obj_controle_dos_inimigos.yy",},"order":0,},
+    {"id":{"name":"obj_screen_shake","path":"objects/obj_screen_shake/obj_screen_shake.yy",},"order":6,},
     {"id":{"name":"spr_player_tomando_dano","path":"sprites/spr_player_tomando_dano/spr_player_tomando_dano.yy",},"order":3,},
     {"id":{"name":"spr_sombra","path":"sprites/spr_sombra/spr_sombra.yy",},"order":0,},
     {"id":{"name":"obj_inimigo_02_soco","path":"objects/obj_inimigo_02_soco/obj_inimigo_02_soco.yy",},"order":1,},

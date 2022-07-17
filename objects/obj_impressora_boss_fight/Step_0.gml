@@ -47,6 +47,7 @@ if (z_pos >= 0) && (xscale == 1)
 		z_pos += 3;
 		if (z_pos + 5 >= 0) && (!ja_ataquei)
 		{
+			if (desenhar_aviso) instance_create_depth(x,y,0,obj_screen_shake)
 			desenhar_aviso = false;
 			if (collision_rectangle(bbox_left,y-15,bbox_right,y-7,obj_player,true,true))
 			{
@@ -82,6 +83,7 @@ if (z_pos >= 0) && (xscale == 1)
 
 if (hp<=0) && (!destruido)
 {
+	instance_create_depth(x,y,0,obj_screen_shake)
 	destruido = true;
 	spd = 3;
 	velh = spd * sign(x-obj_player.x);

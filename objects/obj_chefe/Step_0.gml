@@ -179,6 +179,8 @@ if (!global.especial_ativo)
 							if (z_pos>=0)
 							{
 								z_pos = 0;
+								
+								instance_create_depth(0,0,0,obj_screen_shake)
 			
 									if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_player,true,true))
 									{

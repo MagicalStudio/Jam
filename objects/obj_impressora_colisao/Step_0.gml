@@ -46,6 +46,7 @@ if (!destruido)
 if (hp<=0) && (!destruido)
 {
 	destruido = true;
+	instance_create_depth(x,y,0,obj_screen_shake)
 	spd = 3;
 	velh = spd * sign(x-obj_player.x);
 	velv = -spd;
