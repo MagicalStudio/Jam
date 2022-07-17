@@ -35,6 +35,7 @@ if (!global.especial_ativo)
 		#region engolindo
 			case "engolindo":
 			sprite_index = spr_chefe_saboreando;
+			brilho = c_aqua;
 			if (alarm[7]==-1)
 			{
 				alarm[7]=room_speed*2;
@@ -45,11 +46,13 @@ if (!global.especial_ativo)
 		#region transformando
 		case "transformando":
 			if (alarm[6]==-1) alarm[6] = room_speed*3;
+			brilho = c_aqua;
 		break;
 		#endregion
 		
 		#region parado
 		case "parado":
+			brilho = 0;
 			if (obj_player.estado == "cutscene")
 			{
 				obj_player.estado = "parado";

@@ -28,3 +28,4 @@ z_pos_add = 0;
 z_pos = 0;
 brilho = 0;
 potencia_do_brilho = 0;
+potencia_do_brilho_add = .05;
