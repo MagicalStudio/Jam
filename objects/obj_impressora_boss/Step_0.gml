@@ -3,6 +3,7 @@ var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
 if (!destruido)
 {
+	if(global.especial_ativo) && (instance_exists(obj_prancheta)) hp = 0;
 	if (golpeado_por_inimigo)
 	{
 		if (golpeado_por_inimigo.estado == "knockback") && (golpeado_por_inimigo.id != ultimo_golpe_inimigo)

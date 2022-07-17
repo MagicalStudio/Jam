@@ -113,6 +113,7 @@ if (!global.especial_ativo)
 			{
 				#region chifre
 				case "chifre":
+					image_speed = 1;
 					z_pos = lerp(z_pos,0,.1);
 					var vel_ = 3;
 					velh = lengthdir_x(spd*vel_,direcao_correr);

@@ -19,7 +19,9 @@ if (estado!= "fragilizado") && (estado!= "morto") && (estado!="knockback") && (e
 		
 		if (ataque == "chifre")
 		{
-			sprite_index = spr_chefe_forte_parado;
+			sprite_index = spr_chefe_forte_correndo;
+			image_index = 0;
+			image_speed = 0;
 		}
 		
 		if (ataque == "impressora")

@@ -1,6 +1,8 @@
 var golpeado = instance_place(x,y,obj_player_golpe);
 var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
+if(global.especial_ativo) && (instance_exists(obj_prancheta)) hp = 0;
+
 if (!destruido)
 {
 	if (golpeado_por_inimigo)
