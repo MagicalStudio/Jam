@@ -14,7 +14,7 @@ if (room == rm_menu)
 	draw_set_font(fnt_calibri_creditos)
 	draw_set_halign(fa_left);
 	//desenhando slider
-	var text = "Desenvolvedores:\ndumb\nOskar\nMegastrons\n\nSound Effects:\nopengameart.org/content/explosion-0\n\nMusicas:\nopengameart.org/content/jazz-n-brass-loop\n\nSprites:\nansimuz.itch.io/explosion-animations-pack";
+	var text = "Desenvolvedores:\ndumb\nOskar\nMegastrons\n\nSound Effects:\nopengameart.org/content/explosion-0\n\nMusicas:\nopengameart.org/content/jazz-n-brass-loop\nopengameart.org/content/icy-game-over\n\nSprites:\nansimuz.itch.io/explosion-animations-pack";
 	valor = create_slider(spr_slider,spr_button,valor,string_height(text)-room_height,room_width-10,10);
 	if (!surface_exists(surf))
 	{
@@ -33,8 +33,8 @@ if (keyboard_check_pressed(vk_f11))
 {
  	if (!window_get_fullscreen())
 	{
-		window_set_fullscreen(true);
+		window_set_fullscreen(1);
 	}else{
-		window_set_fullscreen(false);
+		window_set_fullscreen(0);
 	}
 }

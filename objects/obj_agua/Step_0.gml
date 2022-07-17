@@ -8,5 +8,6 @@ if (y<y_destino)
 		instance_destroy();
 		player.hp+=player.hp_max * 25 / 100;
 		player.hp = clamp(player.hp,0,player.hp_max);
+		audio_play_sound(snd_cafe,3,false)
 	}
 }

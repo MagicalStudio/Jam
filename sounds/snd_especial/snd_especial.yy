@@ -14,8 +14,8 @@
   "soundFile": "snd_especial.wav",
   "duration": 1.985578,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "sound effects",
+    "path": "folders/Sounds/sound effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_especial",

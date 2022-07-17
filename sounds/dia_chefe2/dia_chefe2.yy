@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -14,8 +14,8 @@
   "soundFile": "dia_chefe2.mp3",
   "duration": 2.064,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "dialogos",
+    "path": "folders/Sounds/dialogos.yy",
   },
   "resourceVersion": "1.0",
   "name": "dia_chefe2",

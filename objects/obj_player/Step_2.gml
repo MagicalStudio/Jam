@@ -25,19 +25,21 @@ if (global.especial_ativo==false)
 	x+=velh;
 	y+=velv;
 }
-x = clamp(x,global.min_x+sprite_width/2,room_width-sprite_width/2);
-y = clamp(y,sprite_height/2,room_height-sprite_height/2);
 
 
 depth = -bbox_bottom
 
 //mexendo na camera
-
 cam = view_camera[0];
 width = camera_get_view_width(cam);
 
+
 global.min_x = camera_get_view_x(cam);
 
-obj_camera.x = x;
+x = clamp(x,global.min_x+sprite_width/2,obj_camera.x+width/2);
+y = clamp(y,sprite_height/2,room_height-sprite_height/2);
 
-obj_camera.x = clamp(obj_camera.x,global.min_x + width/2, room_width);
+
+	obj_camera.x = x;
+
+obj_camera.x = clamp(obj_camera.x,global.min_x+width/2, room_width);

@@ -1,5 +1,6 @@
 if (!global.especial_ativo)
 {
+	if (hp<=0) estado = "morto";
 	switch(estado)
 	{
 		
@@ -23,14 +24,20 @@ if (!global.especial_ativo)
 				if (instance_exists(obj_esposa)) obj_esposa.morrer = true;
 			}
 			
+			if (obj_esposa.morrer == true)
+			{
+				sprite_index = spr_chefe_comendo;
+			}
+			
 		break;
 		#endregion
 		
 		#region engolindo
 			case "engolindo":
+			sprite_index = spr_chefe_saboreando;
 			if (alarm[7]==-1)
 			{
-				alarm[7]=room_speed*3;
+				alarm[7]=room_speed*2;
 			}
 			break;
 		#endregion
@@ -43,6 +50,11 @@ if (!global.especial_ativo)
 		
 		#region parado
 		case "parado":
+			sprite_index = spr_chefe_forte_parado;
+			if (!audio_is_playing(msc_boss_fight))
+			{
+				audio_play_sound(msc_boss_fight,0,true)
+			}
 			image_angle = lerp(image_angle,0,.1);
 			caindo = false;
 			velv = 0;
@@ -128,6 +140,7 @@ if (!global.especial_ativo)
 					else xscale = -1;
 					if (point_distance(x,y,obj_player.x,obj_player.y-5) > 3) && (!caindo)
 					{
+						sprite_index = spr_chefe_forte_pulando;
 						var dir = point_direction(x,y,obj_player.x,obj_player.y-5);
 						velh = lengthdir_x(spd * 1.5,dir);
 						velv = lengthdir_y(spd * 1.5,dir);
@@ -138,6 +151,7 @@ if (!global.especial_ativo)
 				
 					if (caindo == true)
 					{
+						sprite_index = spr_chefe_forte_bumdada;
 						timer_cair-=5;
 						velv = 0;
 						velh = 0;
@@ -149,7 +163,7 @@ if (!global.especial_ativo)
 							if (z_pos>=0)
 							{
 								z_pos = 0
-								if (collision_rectangle(bbox_left,y-15,bbox_right,y-7,obj_player,true,true))
+								if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_player,true,true))
 								{
 									if  (obj_player.depth < depth) && (obj_player.estado!="knockback") && (obj_player.estado!="caido") && (obj_player.estado!="levantando")
 									{
@@ -159,7 +173,7 @@ if (!global.especial_ativo)
 									}  
 								}
 							
-								if (collision_rectangle(bbox_left,y-15,bbox_right,y-7,obj_impressora_boss_fight,true,true))
+								if (collision_rectangle(bbox_left,y,bbox_right,y+30,obj_impressora_boss_fight,true,true))
 								{
 									if  (obj_impressora_boss_fight.depth < depth)
 									{
@@ -185,6 +199,8 @@ if (!global.especial_ativo)
 					{
 						instance_create_depth(-100,-100,depth,obj_impressora_boss_fight);
 						alarm[3] = room_speed * 3;
+					}else{
+						obj_impressora_boss_fight.xscale+=.025;
 					}
 				break;
 				#endregion
@@ -194,6 +210,7 @@ if (!global.especial_ativo)
 	
 		#region fragilizado
 		case "fragilizado":
+			sprite_index = spr_chefe_forte_fragilizado;
 			image_angle = lerp(image_angle,0,.1);
 			z_pos = lerp(z_pos,0,.1);
 			velv = 0;
@@ -238,7 +255,7 @@ if (!global.especial_ativo)
 		
 		#region knockback
 		case "knockback":
-//		sprite_index = asset_get_index("spr_inimigo_01_apanhando_"+string(skin))
+			sprite_index = spr_chefe_forte_tomando_dano;
 			z_pos+=z_pos_add;
 			if (z_pos>-5) && (subir)
 			{
@@ -262,7 +279,7 @@ if (!global.especial_ativo)
 		#endregion
 		
 		#region caido
-	//	sprite_index = asset_get_index("spr_inimigo_01_apanhando_"+string(skin))
+		sprite_index = spr_chefe_forte_tomando_dano;
 		case "caido":
 			velv = 0;
 			velh = 0;
@@ -272,6 +289,7 @@ if (!global.especial_ativo)
 	
 		#region levantando
 		case "levantando":
+			sprite_index = spr_chefe_forte_tomando_dano;
 			image_angle = lerp(image_angle,0,.1);
 			if (round(image_angle)==0) estado = "parado";
 		break;
@@ -279,6 +297,9 @@ if (!global.especial_ativo)
 		
 		#region morto
 		case "morto":
+			sprite_index = spr_chefe_forte_tomando_dano;
+			z_pos = lerp(z_pos,0,.1);
+			image_angle = lerp(image_angle,0,.1);
 			var colisao = collision_rectangle(bbox_left,bbox_top,bbox_right,y,obj_player_golpe,true,true);
 			if (colisao) 
 			{
@@ -292,7 +313,7 @@ if (!global.especial_ativo)
 		#endregion
 	}
 }else{
-	
+	sprite_index = spr_chefe_forte_tomando_dano;
 	z_pos = lerp(z_pos,0,.1);
 	if (alarm[5] == -1) && (instance_exists(obj_prancheta))
 	{
@@ -300,6 +321,7 @@ if (!global.especial_ativo)
 	}
 	//estado
 	estado = "parado";
+	
 	//chifre
 	direcao_correr = 0;
 

@@ -50,6 +50,7 @@ if (xscale>1)
 		
 		if (keyboard_check(vk_space)) or (keyboard_check(ord("C")))
 		{
+			audio_stop_all();
 			switch(opcoes[opcao])
 			{
 				case "Menu":
@@ -79,6 +80,7 @@ if (xscale>1)
 			}
 			instance_activate_object(obj_player);
 			obj_player.estado = "parado";
+			obj_player.energia = 0;
 			instance_activate_object(obj_camera);
 			surface_free(surf);	
 			surf = -1;

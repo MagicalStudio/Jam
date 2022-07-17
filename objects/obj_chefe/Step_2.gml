@@ -1,7 +1,13 @@
 //colisao e movimento
 if (!global.especial_ativo)
 {
-	
+	if (place_meeting(x,y,obj_colisao))
+	{
+		while(place_meeting(x,y,obj_colisao))
+		{
+			y++;
+		}
+	}
 	if (estado!="knockback")
 	{
 		if (place_meeting(x+velh,y,obj_colisao))
@@ -26,24 +32,21 @@ if (!global.especial_ativo)
 	}
 
 	y+=velv;
-	
-	if (x!=clamp(x,0,room_width)) or (y!=clamp(y,0, room_height))
+ 	
+	if (x!=clamp(x,sprite_width/2,room_width-sprite_width/2)) or (y!=clamp(y,sprite_height/2, room_height-sprite_height/2))
 	{
-		if (estado!="caido") && (estado!="knockback") && (estado!="levantando")
+		if (estado!="caido") && (estado!="knockback") && (estado!="levantando") && (estado!="dialogo") && (estado!="transformando") && (estado!="engolindo")
 		{
 			x=lerp(x,room_width/2,.1);
 			y=lerp(y,room_height/2,.1);
+			
+			if (estado == "atacar") && (ataque == "chifre")
+			{
+				estado = "parado";
+			}
+	
 		}
-	}
-	
-	if (estado == "atacar") && (ataque == "chifre") && (place_meeting(x+velh,y,obj_chefe_parar_de_correr))
-	{
-		estado = "parado";
-	}
-	
-	if (estado == "atacar") && (ataque == "chifre") && (place_meeting(x,y+velv,obj_chefe_parar_de_correr))
-	{
-		estado = "parado";
+		
 	}
 	
 }

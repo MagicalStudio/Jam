@@ -1,4 +1,4 @@
-colisao_player = collision_rectangle(x+10,y,x+20,y+50,obj_player,true,true);
+colisao_player = collision_rectangle(x+10,y,x+20,y+30,obj_player,true,true);
 
 if (colisao_player)
 {

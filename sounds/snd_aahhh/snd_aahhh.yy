@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -14,8 +14,8 @@
   "soundFile": "snd_aahhh.mp3",
   "duration": 1.104,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "sound effects",
+    "path": "folders/Sounds/sound effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_aahhh",

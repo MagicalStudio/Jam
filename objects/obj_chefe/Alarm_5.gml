@@ -1,6 +1,14 @@
 if (instance_inside_view_camera(view_camera[0]))
 {
 	hp --
+	if (hp <= 0) 
+	{
+		estado = "morto";
+		if (instance_exists(obj_inimigo_pai))
+		{
+			instance_destroy(obj_inimigo_pai);
+		}
+	}
 	xscale *=-1;
 
 	if (!audio_is_playing(snd_soco))

@@ -1,7 +1,7 @@
 var golpeado = instance_place(x,y,obj_player_golpe);
 var golpeado_por_inimigo = instance_place(x,y,obj_inimigo_pai)
 
-if (z_pos >= 0)
+if (z_pos >= 0) && (xscale == 1)
 {
 	z_pos = 0;
 	if (!destruido)
@@ -35,7 +35,6 @@ if (z_pos >= 0)
 				hp-=golpeado.dano;
 				alarm[2] = 30;
 				global.score+=golpeado.pontos;
-				criar_pop_up("+"+string(golpeado.pontos),x,y-sprite_height/2);
 				ultimo_golpe=golpeado.id;
 			}
 		}
@@ -43,21 +42,36 @@ if (z_pos >= 0)
 }else{
 	if (cair = true)
 	{
+		xscale = lerp(xscale,1,.1);
 		z_pos += 5;
 		if (z_pos + 5 >= 0) && (!ja_ataquei)
 		{
+			desenhar_aviso = false;
 			if (collision_rectangle(bbox_left,y-15,bbox_right,y-7,obj_player,true,true))
 			{
 				ja_ataquei = true;
 				obj_player.estado = "knockback";
 				obj_player.xscale = sign(x-obj_player.x);
+				if (obj_player.xscale == 0) obj_player.xscale = choose(-1,1);
 				obj_player.hp -= obj_chefe.dano;
 			}
 		}
 		z_pos = clamp(z_pos,-2000,0);
 	}else{
-		x=obj_player.x
-		y=obj_player.y-5;
+		if (xscale < 1) && (obj_chefe.estado = "atacar")
+		{
+			x = obj_chefe.x;
+			y = obj_chefe.y-obj_chefe.sprite_height/2;
+		}else{
+			z_pos = lerp(z_pos,-200,.1);
+			if (z_pos < -150) && (alarm[0]==-1) alarm[0] = room_speed *2;
+			if (alarm[0]!=-1)
+			{
+				x=obj_player.x
+				y=obj_player.y-5;
+			}
+			xscale = lerp(xscale,1,.1);
+		}
 	}
 }
 

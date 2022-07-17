@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "chefe",
-    "path": "folders/Sprites/chefe.yy",
+    "path": "folders/Sprites/chefe/chefe.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_chefe",

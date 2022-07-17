@@ -14,8 +14,8 @@
   "soundFile": "snd_explosao.wav",
   "duration": 0.983583,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "sound effects",
+    "path": "folders/Sounds/sound effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_explosao",

@@ -10,7 +10,7 @@ ataque = "0";
 subir = true;
 
 //saude
-hp_max = 1//32;
+hp_max = 32;
 hp = hp_max;
 quantidade_de_golpes_tomados = 0;
 

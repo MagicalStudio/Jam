@@ -19,3 +19,16 @@ if (room == rm_sala_do_boss_restart)
 	x=32;
 	y=96;
 }
+
+if (room == rm_corredor)
+{
+	x = 64;
+	y = 96;
+	
+	hp = hp_max;
+	energia = 0;
+	
+	global.min_x = 0;
+}
+
+if (room == rm_menu) instance_destroy();

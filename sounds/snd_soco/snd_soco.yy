@@ -14,8 +14,8 @@
   "soundFile": "snd_soco.mp3",
   "duration": 0.339592,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "sound effects",
+    "path": "folders/Sounds/sound effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_soco",
