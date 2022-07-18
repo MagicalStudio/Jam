@@ -45,6 +45,12 @@ if(global.especial_ativo) && (instance_exists(obj_prancheta)) && (instance_insid
 
 if (hp<=0) && (!destruido)
 {
+	
+	if (!audio_is_playing(msc_corredor))
+	{
+		audio_play_sound(msc_corredor,0,true);
+	}
+	
 	destruido = true;
 	instance_create_depth(x,y,0,obj_screen_shake)
 	spd = 3;

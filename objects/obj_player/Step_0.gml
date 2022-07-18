@@ -16,6 +16,7 @@ if (!instance_exists(obj_morte))
 		case "cutscene":
 			velv = 0;
 			velh = 0;
+			sprite_index = spr_player_parado;
 		break;
 		#endregion
 		
@@ -70,19 +71,19 @@ if (!instance_exists(obj_morte))
 				{
 					if (combo_fase == 2) // gancho
 					{
-						instance_create_depth(x+10*xscale,y,depth,obj_player_gancho,{image_xscale : xscale, dano : 2, pontos : 200})
+						instance_create_depth(x+5*xscale,y,depth,obj_player_gancho,{image_xscale : xscale, dano : 2, pontos : 200})
 						combo_fase = 0; // volto pro soco
 						sprite_index = spr_player_gancho;
 						alarm[0] = tempo_ataque*2
 					}else if (combo_fase == 1) // chute
 					{
-						instance_create_depth(x+10*xscale,y,depth,obj_player_chute,{image_xscale : xscale, dano : 1, pontos : 100})
+						instance_create_depth(x+5*xscale,y,depth,obj_player_chute,{image_xscale : xscale, dano : 1, pontos : 100})
 						combo_fase=2; // vou pro gancho
 						alarm[0] = tempo_ataque;
 						sprite_index = spr_player_chutando;
 					}else if (combo_fase == 0) //soco
 					{
-						instance_create_depth(x+10*xscale,y,depth,obj_player_soco,{image_xscale : xscale, dano : 1, pontos : 50})
+						instance_create_depth(x+5*xscale,y,depth,obj_player_soco,{image_xscale : xscale, dano : 1, pontos : 50})
 						combo_fase=1; // vou pro chute
 						sprite_index = spr_player_socando
 						alarm[0] = tempo_ataque
@@ -168,7 +169,9 @@ if (!instance_exists(obj_morte))
 	
 		#region especial
 		case "especial":
-		image_angle = lerp(image_angle,0,.1);
+			if (!instance_exists(obj_screen_shake)) instance_create_depth(0,0,0,obj_screen_shake);
+			sprite_index = spr_player_especial;
+			image_angle = lerp(image_angle,0,.1);
 			var x_ = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])/2
 			if (x!=clamp(x,x_-1,x_+1))
 			{

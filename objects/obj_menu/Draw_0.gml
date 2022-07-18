@@ -30,7 +30,7 @@ if (room == rm_menu)
 	draw_set_font(fnt_calibri_creditos)
 	draw_set_halign(fa_left);
 	//desenhando slider
-	var text = "ESC para voltar\n\nDesenvolvedores:\ndumb\nOskar\nMegastrons\n\nSound Effects:\nopengameart.org/content/explosion-0\n\nMusicas:\nopengameart.org/content/jazz-n-brass-loop\nopengameart.org/content/icy-game-over\n\nSprites:\nansimuz.itch.io/explosion-animations-pack";
+	var text = "ESC para voltar\n\nDesenvolvedores:\ndumb\nOskar\nMegastrons\n\nSound Effects:\nopengameart.org/content/explosion-0\npor TinyWorlds\n\nopengameart.org/content/heal\nopengameart.org/content/jingling-heal\npor Zoltan Mihaly\n\nopengameart.org/content/level-up-sound-effects\npor bart\n\nopengameart.org/content/door-open-door-close-set\npor qubodup\n\nopengameart.org/content/falling-body\npor remaxim\n\nfreesound.org/people/MATRIXXX_/sounds/495453/\npor MATRIXXX_\n\nMusicas:\nopengameart.org/content/jazz-n-brass-loop\npor Emma_MA\n\nopengameart.org/content/icy-game-over\npor Sudocolon\n\nopengameart.org/content/battle-theme-a\npor cynicmusic\n\nopengameart.org/content/path-to-lake-land\npor Alexandr Zhelanov\n\nSprites:\nansimuz.itch.io/explosion-animations-pack\nwww.pexels.com/pt-br/";
 	valor = create_slider(spr_slider,spr_button,valor,string_height(text)-room_height,room_width-10,10);
 	if (!surface_exists(surf))
 	{
@@ -42,7 +42,7 @@ if (room == rm_menu)
 		draw_surface_part(surf,0,valor,room_width,room_height,0,0);
 	}
 }
-draw_set_font(-1)
+draw_set_font(fnt_calibri)
 draw_set_halign(fa_left);
 
 if (keyboard_check_pressed(vk_f11))

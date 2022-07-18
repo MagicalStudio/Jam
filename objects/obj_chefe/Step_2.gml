@@ -73,5 +73,9 @@ if (!global.especial_ativo)
 	y+=velv;
 
 }
+if (hp<=0)
+{
+	x=clamp(x,sprite_width/2,room_width-sprite_width/2)
+}
 
 depth=-(y+sprite_height/2);

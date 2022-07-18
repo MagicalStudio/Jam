@@ -1,6 +1,6 @@
 if (!global.especial_ativo)
 {
-	if (hp<=0) estado = "morto";
+	if (hp<=0) && (estado!="knockback") && (estado!="caido") estado = "knockback";
 	switch(estado)
 	{
 		
@@ -267,7 +267,7 @@ if (!global.especial_ativo)
 							instance_destroy(obj_inimigo_pai);
 						}
 					
-						estado = "morto";
+						estado = "knockback";
 					}
 				
 					if (quantidade_de_golpes_tomados==3) 
@@ -304,6 +304,7 @@ if (!global.especial_ativo)
 					z_pos_add = -2;
 				}
 			}
+		
 			image_angle+=4 * xscale;
 			velh = xscale*-1;
 			velv = 0;
@@ -317,6 +318,18 @@ if (!global.especial_ativo)
 			velv = 0;
 			velh = 0;
 			if (alarm[4]==-1) alarm[4] = room_speed;
+			
+			if (hp<=0)
+			{
+				sprite_index = spr_chefe_forte_tomando_dano;
+				z_pos = lerp(z_pos,0,.1);
+				image_angle = lerp(image_angle,0,.1);
+				if (!instance_exists(obj_ko))
+				{
+					instance_create_depth(x,y,depth,obj_impacto);
+					instance_create_depth(0,0,depth,obj_ko);
+				}
+			}
 		break;
 		#endregion
 	
@@ -330,18 +343,7 @@ if (!global.especial_ativo)
 		
 		#region morto
 		case "morto":
-			sprite_index = spr_chefe_forte_tomando_dano;
-			z_pos = lerp(z_pos,0,.1);
-			image_angle = lerp(image_angle,0,.1);
-			var colisao = collision_rectangle(bbox_left,bbox_top,bbox_right,y,obj_player_golpe,true,true);
-			if (colisao) 
-			{
-				if (!instance_exists(obj_ko))
-				{
-					instance_create_depth(x,y,depth,obj_impacto);
-					instance_create_depth(0,0,depth,obj_ko);
-				}
-			}
+
 		break;
 		#endregion
 	}

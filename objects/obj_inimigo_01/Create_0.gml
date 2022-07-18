@@ -11,7 +11,7 @@ variancia = 80;
 aumentar_x = false;
 
 //saude
-hp_max = 7;
+hp_max = irandom_range(4,7);
 hp = hp_max;
 
 //atacar

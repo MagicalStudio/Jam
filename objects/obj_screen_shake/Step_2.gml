@@ -9,6 +9,8 @@ var x_cam = camera_get_view_x(view_camera[0]);
 var y_cam = camera_get_view_y(view_camera[0]);
 
 camera_set_view_angle(view_camera[0],angle);
+
+if (f <= 0) instance_destroy();
 /*
 x=obj_camera.x
 y=obj_camera.y;
