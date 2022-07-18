@@ -1,4 +1,4 @@
-event_inherited();
+ event_inherited();
 
 #region nova state machine
 
@@ -20,7 +20,7 @@ if (!global.especial_ativo)
 			velh = 0;
 			velv = 0;
 		
-			if (instance_inside_view_camera(view_camera[0])) or (!pode_usar_clamp) && (y > room_height+sprite_height/2)
+			if (instance_inside_view_camera(view_camera[0]))
 			{
 				if (alarm[0]==-1) alarm[0] = room_speed/2+irandom_range(-20,20);
 			}
