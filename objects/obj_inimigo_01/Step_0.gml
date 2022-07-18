@@ -50,7 +50,7 @@ if (!global.especial_ativo)
 				velv = lengthdir_y(vel,direcao_andar);		
 			}else{
 				estado = "atacando";
-				timer_para_avancar = 40;
+				timer_para_avancar = 20;
 			}
 	
 		break;
@@ -109,7 +109,7 @@ if (!global.especial_ativo)
 								}else{
 									sprite_index = asset_get_index("spr_inimigo_01_armando_"+string(skin))
 									estado = "atacar";
-									timer_para_avancar = 40;
+									timer_para_avancar = 20;
 								}
 							}
 						}

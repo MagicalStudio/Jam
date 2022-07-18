@@ -1,0 +1,1 @@
+quantidade_inimigos_atacando = 0;

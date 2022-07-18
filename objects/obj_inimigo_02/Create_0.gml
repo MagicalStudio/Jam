@@ -15,7 +15,7 @@ hp_max = irandom_range(4,7);
 hp = hp_max;
 
 //atacar
-timer_para_avancar = 40;
+timer_para_avancar = 20;
 escolhido_para_atacar = false;
 ataque = 0;
 

@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "coisa para deixar bonito",
+    "path": "folders/Objects/coisa para deixar bonito.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_parede",

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_coracao",
+    "path": "sprites/spr_coracao/spr_coracao.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -18,17 +21,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Objects/player.yy",
+    "name": "coisa para deixar bonito",
+    "path": "folders/Objects/coisa para deixar bonito.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player_golpe",
+  "name": "obj_coracao",
   "tags": [],
   "resourceType": "GMObject",
 }

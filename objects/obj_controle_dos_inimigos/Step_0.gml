@@ -8,3 +8,8 @@ if (room==rm_sala_do_boss) or (room==rm_sala_do_boss_restart)
 		}
 	}
 }
+
+if (alarm[1]==-1) && (quantidade_inimigos_atacando)
+{
+	alarm[1] = room_speed * 2;
+}

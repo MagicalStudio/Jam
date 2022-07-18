@@ -1,3 +1,5 @@
+depth = -16000;
+
 draw_set_font(fnt_calibri)
 draw_set_halign(fa_center);
 if (room == rm_menu)
@@ -7,6 +9,14 @@ if (room == rm_menu)
 		surface_free(surf);
 		surf = -1;
 	}
+	
+	draw_set_color(c_white)
+	draw_set_alpha(.3)
+	draw_rectangle(0,0,room_width,room_height,false);	
+	draw_set_alpha(1)
+	
+	draw_sprite(spr_nome,0,room_width/2,40)
+	
 	draw_set_color(c_black)
 	draw_text(room_width/2-1,100,"ESPAÇO para iniciar");
 	draw_text(room_width/2+1,100,"ESPAÇO para iniciar");
@@ -22,10 +32,11 @@ if (room == rm_menu)
 	draw_text(room_width/2-1,115,"F11 Tela Cheia");
 	draw_text(room_width/2,116,"F11 Tela Cheia");
 	draw_text(room_width/2,114,"F11 Tela Cheia");
-	draw_set_color(c_white)
+	draw_set_color(c_yellow)
 	draw_text(room_width/2,100,"ESPAÇO para iniciar");
 	draw_text(room_width/2,85,"ESC Créditos");
 	draw_text(room_width/2,115,"F11 Tela Cheia");
+	draw_set_color(c_white)
 }else{
 	draw_set_font(fnt_calibri_creditos)
 	draw_set_halign(fa_left);

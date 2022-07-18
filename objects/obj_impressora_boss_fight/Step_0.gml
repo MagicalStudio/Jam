@@ -130,6 +130,8 @@ if (hp<=0) && (!destruido)
 	{
 		obj_chefe.alarm[9] = 10;
 		obj_chefe.estado = "fragilizado";
+		obj_chefe.hp -= 3;
+		audio_play_sound(snd_boss_dano,1,0);
 	}
 }
 

@@ -1,4 +1,5 @@
 inimigos_array = inimigos_escolhidos_para_atacar()
+quantidade_inimigos_atacando=clamp(quantidade_inimigos_atacando,0,2);
 if (inimigos_array!=false) && (quantidade_inimigos_atacando<2)
 {	
 	if (quantidade_inimigos_atacando<2)

@@ -51,7 +51,7 @@ if (!global.especial_ativo)
 				velv = lengthdir_y(vel,direcao_andar);		
 			}else{
 				estado = "atacando";
-				timer_para_avancar = 40;
+				timer_para_avancar = 20;
 			}
 	
 		break;
@@ -110,7 +110,7 @@ if (!global.especial_ativo)
 								}else{
 									ataque = choose("taser","porrada");
 									estado = "atacar";
-									timer_para_avancar = 40;
+									timer_para_avancar = 20;
 									sprite_index = spr_inimigo_02_armando_1;
 								}
 							}

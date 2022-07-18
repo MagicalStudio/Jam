@@ -14,7 +14,6 @@ if (!global.especial_ativo)
 				if (audio_sound_get_gain(msc_corredor) == 0)
 				{
 					audio_stop_sound(msc_corredor);
-					audio_play_sound(dia_chefe,1,0);
 					conversei = true;
 				}
 			}

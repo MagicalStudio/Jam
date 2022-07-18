@@ -1,0 +1,1 @@
+estado = "easter egg, se tu viu isso saiba que te amo";
