@@ -21,7 +21,7 @@ if (instance_exists(obj_chefe)) // desenhando vida do boss
 // nem lembro mais oq isso faz.
 if (instance_exists(obj_inimigo_pai))
 {
-	if (room == rm_corredor) && (cam_x < 1240)
+	if (room == rm_corredor) && (global.min_x < 1240)
 	{
 		if (!enemy_is_inside_view_camera(view_camera[0]))
 		{
@@ -29,7 +29,7 @@ if (instance_exists(obj_inimigo_pai))
 		}
 	}
 }else{
-	if (room == rm_corredor)
+	if (room == rm_corredor) && (global.min_x < 1240)
 	{
 		obj_camera.x_add = lerp(obj_camera.x_add,100,.25);
 		draw_sprite(spr_seta_go,0,cam_x+camera_get_view_width(view_camera[0])-48,room_height/2)
